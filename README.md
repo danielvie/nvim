@@ -14,3 +14,9 @@
 #### instalar clang
 
 	https://releases.llvm.org/download.html
+
+#### instalar plugins Coc
+
+	CocInstall coc-tslint-plugin coc-tsserver coc-emmet coc-css coc-html coc-json
+	CocInstall coc-python coc-clangd
+
