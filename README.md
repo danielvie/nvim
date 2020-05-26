@@ -18,5 +18,5 @@
 #### instalar plugins Coc
 
 	CocInstall coc-tslint-plugin coc-tsserver coc-emmet coc-css coc-html coc-json
-	CocInstall coc-python coc-clangd
+	CocInstall coc-python coc-clangd coc-snippets
 

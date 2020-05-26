@@ -12,7 +12,6 @@
 	Plug 'https://github.com/frazrepo/vim-rainbow'
 	Plug 'https://github.com/itchyny/lightline.vim'
 	Plug 'https://github.com/jiangmiao/auto-pairs.git'
-	" Plug 'https://github.com/junegunn/fzf.vim'
 	Plug 'https://github.com/preservim/nerdtree'
 	Plug 'https://github.com/tpope/vim-commentary'
 	Plug 'https://github.com/tpope/vim-fugitive'
@@ -40,5 +39,6 @@
 
 	" Use release branch (Recommend)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'honza/vim-snippets'
 
 	call plug#end()

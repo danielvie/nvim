@@ -28,6 +28,8 @@
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\multicursor.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\sneak.vim
+		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc_snippets.vim
+		source C:\Users\Daniel\AppData\Local\nvim\plug-config\easymotion.vim
 		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\deoplete.vim
 	else
 		" REMAP
@@ -38,6 +40,8 @@
 		source ~/.config/nvim/plug-config/multicursor.vim
 		source ~/.config/nvim/plug-config/coc.vim
 		source ~/.config/nvim/plug-config/sneak.vim
+		source ~/.config/nvim/plug-config/coc_snippets.vim
+		source ~/.config/nvim/plug-config/easymotion.vim
 		" source ~/.config/nvim/plug-config/deoplete.vim
 	endif
 
