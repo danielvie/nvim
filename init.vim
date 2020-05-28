@@ -8,6 +8,8 @@
 
 	" CONFIG BASICe
 	set nu rnu
+	set autoread
+
 	" colorscheme molokai
 	colorscheme onedark
 	set ts=4 sw=4
@@ -45,3 +47,4 @@
 		" source ~/.config/nvim/plug-config/deoplete.vim
 	endif
 
+	map <esc> <esc>

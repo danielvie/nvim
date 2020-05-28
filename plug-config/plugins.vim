@@ -26,6 +26,16 @@
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'andymass/vim-matchup'
 
+	" Have the file system follow you around
+	Plug 'airblade/vim-rooter'
+
+	" Better Syntax Support
+	Plug 'sheerun/vim-polyglot'
+
+	" Interactive code
+    " Plug 'ChristianChiarulli/codi.vim'
+    " Plug 'metakirby5/codi.vim'
+
 	" if has('nvim')
 	"   Plug 'https://github.com/Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	" else

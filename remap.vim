@@ -16,9 +16,11 @@
 	" abre arquivo de edicao
 	if has('win32')
 		nnoremap <c-,> :edit C:\Users\Daniel\AppData\Local\nvim\init.vim<cr>
+		nnoremap <a-.> :edit C:\Users\Daniel\AppData\Local\nvim\init.vim<cr>
 		nnoremap <a-,> :tabedit C:\Users\Daniel\AppData\Local\nvim\init.vim<cr>
 	else
 		nnoremap <c-,> :edit ~/.config/nvim/init.vim<cr>
+		nnoremap <a-.> :edit ~/.config/nvim/init.vim<cr>
 		nnoremap <a-,> :tabedit ~/.config/nvim/init.vim<cr>
 	endif
 
