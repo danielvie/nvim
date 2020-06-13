@@ -36,7 +36,6 @@
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\easymotion.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\ctrp.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\indent.vim
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\deoplete.vim
 	else
 		" REMAP
 		source ~/.config/nvim/remap.vim
@@ -50,7 +49,6 @@
 		source ~/.config/nvim/plug-config/easymotion.vim
 		source ~/.config/nvim/plug-config/ctrp.vim
 		source ~/.config/nvim/plug-config/indent.vim
-		" source ~/.config/nvim/plug-config/deoplete.vim
 	endif
 
 	map <esc> <esc>
