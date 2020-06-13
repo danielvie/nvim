@@ -12,7 +12,9 @@
 
 	" colorscheme molokai
 	colorscheme onedark
+
 	set ts=4 sw=4
+	set expandtab
 
 	" manter fold
 	augroup remember_folds
@@ -32,6 +34,8 @@
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\sneak.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc_snippets.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\easymotion.vim
+		source C:\Users\Daniel\AppData\Local\nvim\plug-config\ctrp.vim
+		source C:\Users\Daniel\AppData\Local\nvim\plug-config\indent.vim
 		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\deoplete.vim
 	else
 		" REMAP
@@ -44,6 +48,8 @@
 		source ~/.config/nvim/plug-config/sneak.vim
 		source ~/.config/nvim/plug-config/coc_snippets.vim
 		source ~/.config/nvim/plug-config/easymotion.vim
+		source ~/.config/nvim/plug-config/ctrp.vim
+		source ~/.config/nvim/plug-config/indent.vim
 		" source ~/.config/nvim/plug-config/deoplete.vim
 	endif
 

@@ -30,3 +30,6 @@
 	" map para mudar de tab
 	map <C-]> gt
 	map <C-[> gT
+
+	" map para mudar de buffer
+	map <A-=> :bn<cr>

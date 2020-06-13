@@ -6,7 +6,6 @@
 	" selecionar varios pontos
 	Plug 'https://github.com/terryma/vim-multiple-cursors'
 
-	Plug 'https://github.com/Yggdroot/indentLine'
 	Plug 'https://github.com/airblade/vim-gitgutter'
 	Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 	Plug 'https://github.com/frazrepo/vim-rainbow'
@@ -45,10 +44,12 @@
 	" endif
 
 	" Plug 'https://github.com/shougo/deoplete-clangx'
-	"
 
 	" Use release branch (Recommend)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'honza/vim-snippets'
+
+	" Show Indent line
+	Plug 'https://github.com/Yggdroot/indentLine'
 
 	call plug#end()
