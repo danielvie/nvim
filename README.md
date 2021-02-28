@@ -7,6 +7,15 @@
 
 	path -> C:\Users\$User\AppData\Local\nvim\init.vim
 
+## INICIALIZANDO PlugInstall
+
+##### instalar os plugins e CoC
+	:PlugInstall
+
+	:CocInstall coc-python coc-clangd coc-snippets
+	
+============================================================================================
+
 ## instalar pynvim
 
 	>> pip install --user pynvim
@@ -25,17 +34,15 @@
 
 	https://releases.llvm.org/download.html
 
-## instalar plugins Coc
+## INSTALAR OUTROS PACOTES COC
 
 ##### javascript
 
-	CocInstall coc-tslint-plugin coc-tsserver coc-emmet coc-css coc-html coc-json
+	:CocInstall coc-tslint-plugin coc-tsserver coc-emmet coc-css coc-html coc-json
 
-##### c++ / python
 
-	CocInstall coc-python coc-clangd coc-snippets
 
 ##### total
 
-	CocInstall coc-tslint-plugin coc-tsserver coc-emmet coc-css coc-html coc-json coc-python coc-clangd coc-snippets
+	:CocInstall coc-tslint-plugin coc-tsserver coc-emmet coc-css coc-html coc-json coc-python coc-clangd coc-snippets
 
