@@ -10,6 +10,9 @@
 	set nu rnu
 	set autoread
 
+    " PATHGEN
+    execute pathogen#infect()
+
 	" colorscheme molokai
 	colorscheme onedark
 
@@ -28,27 +31,31 @@
 		source C:\Users\Daniel\AppData\Local\nvim\remap.vim
 
 		" PLUGINS
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\plugins.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\multicursor.vim
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\sneak.vim
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc_snippets.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\easymotion.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\ctrp.vim
 		source C:\Users\Daniel\AppData\Local\nvim\plug-config\indent.vim
+
+		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc.vim
+		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc_snippets.vim
+
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\plugins.vim
 	else
 		" REMAP
 		source ~/.config/nvim/remap.vim
 
 		" PLUGINS
-		source ~/.config/nvim/plug-config/plugins.vim
 		source ~/.config/nvim/plug-config/multicursor.vim
-		source ~/.config/nvim/plug-config/coc.vim
 		source ~/.config/nvim/plug-config/sneak.vim
-		source ~/.config/nvim/plug-config/coc_snippets.vim
 		source ~/.config/nvim/plug-config/easymotion.vim
 		source ~/.config/nvim/plug-config/ctrp.vim
 		source ~/.config/nvim/plug-config/indent.vim
+
+		source ~/.config/nvim/plug-config/coc.vim
+		source ~/.config/nvim/plug-config/coc_snippets.vim
+
+		" source ~/.config/nvim/plug-config/plugins.vim
 	endif
 
 	map <esc> <esc>

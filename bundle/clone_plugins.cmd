@@ -1,0 +1,20 @@
+
+git clone https://github.com/terryma/vim-multiple-cursors
+git clone https://github.com/airblade/vim-gitgutter
+git clone https://github.com/ctrlpvim/ctrlp.vim
+git clone https://github.com/frazrepo/vim-rainbow
+git clone https://github.com/itchyny/lightline.vim
+git clone https://github.com/jiangmiao/auto-pairs.git
+git clone https://github.com/preservim/nerdtree
+git clone https://github.com/tpope/vim-commentary
+git clone https://github.com/tpope/vim-fugitive
+git clone https://github.com/tpope/vim-surround
+git clone https://github.com/wellle/targets.vim
+git clone https://github.com/easymotion/vim-easymotion
+git clone https://github.com/justinmk/vim-sneak
+git clone https://github.com/machakann/vim-highlightedyank
+git clone https://github.com/andymass/vim-matchup
+git clone https://github.com/airblade/vim-rooter
+git clone https://github.com/sheerun/vim-polyglot
+git clone https://github.com/honza/vim-snippets
+git clone https://github.com/Yggdroot/indentLine
