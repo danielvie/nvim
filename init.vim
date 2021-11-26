@@ -26,25 +26,15 @@
 		au BufWinEnter ?* silent! loadview 1
 	augroup END
 
-	if has('win32')
-		" REMAP
-		source C:\Users\Daniel\AppData\Local\nvim\remap.vim
-
-		" PLUGINS
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\multicursor.vim
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\sneak.vim
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\easymotion.vim
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\ctrp.vim
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\indent.vim
-
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc.vim
-		source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc_snippets.vim
-
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\plugins.vim
-	else
-		" REMAP
+	" REMAP
+	if has('unix')
 		source ~/.config/nvim/remap.vim
+	else
+		source C:\Users\Daniel\AppData\Local\nvim\remap.vim
+	endif
 
+	if has('unix')
+		
 		" PLUGINS
 		source ~/.config/nvim/plug-config/multicursor.vim
 		source ~/.config/nvim/plug-config/sneak.vim
@@ -56,6 +46,18 @@
 		source ~/.config/nvim/plug-config/coc_snippets.vim
 
 		" source ~/.config/nvim/plug-config/plugins.vim
+	else
+		" PLUGINS
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\multicursor.vim
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\sneak.vim
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\easymotion.vim
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\ctrp.vim
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\indent.vim
+
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc.vim
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc_snippets.vim
+
+		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\plugins.vim
 	endif
 
 	map <esc> <esc>
