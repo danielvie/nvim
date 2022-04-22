@@ -1,2 +1,2 @@
 
-	map <Leader> <Plug>(easymotion-prefix)
+	map <Leader><Leader> <Plug>(easymotion-prefix)

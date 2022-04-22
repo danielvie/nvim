@@ -1,5 +1,5 @@
 
-	noremap ; :
+	" noremap ; :
 	noremap <c-f> ;
 
 	nnoremap <a-j> :m .+1<cr>==
@@ -8,6 +8,12 @@
 	inoremap <a-k> <esc>:m .-2<cr>==gi
 	vnoremap <a-j> :m '>+1<cr>gv=gv
 	vnoremap <a-k> :m '<-2<cr>gv=gv
+
+	onoremap L $
+	onoremap H ^
+
+	nnoremap <leader>w :w<cr>
+	nnoremap <leader>q :q<cr>
 
 	" mantem o bloco selecionado quando mover
 	vnoremap < <gv

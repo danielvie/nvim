@@ -30,7 +30,7 @@
 	if has('unix')
 		source ~/.config/nvim/remap.vim
 	else
-		source C:\Users\Daniel\AppData\Local\nvim\remap.vim
+		source $LOCALAPPDATA\nvim\remap.vim
 	endif
 
 	if has('unix')
@@ -42,22 +42,20 @@
 		source ~/.config/nvim/plug-config/ctrp.vim
 		source ~/.config/nvim/plug-config/indent.vim
 
-		source ~/.config/nvim/plug-config/coc.vim
-		source ~/.config/nvim/plug-config/coc_snippets.vim
+		" source ~/.config/nvim/plug-config/coc.vim
+		" source ~/.config/nvim/plug-config/coc_snippets.vim
 
 		" source ~/.config/nvim/plug-config/plugins.vim
 	else
 		" PLUGINS
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\multicursor.vim
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\sneak.vim
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\easymotion.vim
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\ctrp.vim
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\indent.vim
+		source $LOCALAPPDATA\nvim\plug-config\multicursor.vim
+		source $LOCALAPPDATA\nvim\plug-config\sneak.vim
+		source $LOCALAPPDATA\nvim\plug-config\easymotion.vim
+		source $LOCALAPPDATA\nvim\plug-config\ctrp.vim
+		source $LOCALAPPDATA\nvim\plug-config\indent.vim
 
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc.vim
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\coc_snippets.vim
+		" source $LOCALAPPDATA\nvim\plug-config\coc.vim
+		" source $LOCALAPPDATA\nvim\plug-config\coc_snippets.vim
 
-		" source C:\Users\Daniel\AppData\Local\nvim\plug-config\plugins.vim
+		" source $LOCALAPPDATA\nvim\plug-config\plugins.vim
 	endif
-
-	map <esc> <esc>
