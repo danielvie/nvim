@@ -1,6 +1,6 @@
 
 	" noremap ; :
-	noremap <c-f> ;
+	" noremap <c-f> ;
 
 	nnoremap <a-j> :m .+1<cr>==
 	nnoremap <a-k> :m .-2<cr>==
@@ -25,17 +25,13 @@
 		nnoremap <a-.> :edit C:\Users\Daniel\AppData\Local\nvim\init.vim<cr>
 		nnoremap <a-,> :tabedit C:\Users\Daniel\AppData\Local\nvim\init.vim<cr>
 	else
-		nnoremap <c-,> :edit ~/.config/nvim/init.vim<cr>
-		nnoremap <a-.> :edit ~/.config/nvim/init.vim<cr>
-		nnoremap <a-,> :tabedit ~/.config/nvim/init.vim<cr>
+		nnoremap <c-,> :edit ~/.vim/init.vim<cr>
+		nnoremap <a-.> :edit ~/.vim/init.vim<cr>
+		nnoremap <a-,> :tabedit ~/.vim/init.vim<cr>
 	endif
 
 	" sair do modo terminal
 	tnoremap <esc> <c-\><c-n>
-
-	" map para mudar de tab
-	map <C-]> gt
-	map <C-[> gT
 
 	" map para mudar de buffer
 	map <A-=> :bn<cr>
