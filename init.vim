@@ -13,8 +13,12 @@
     " PATHGEN
     execute pathogen#infect()
 
-	" colorscheme molokai
-	colorscheme onedark
+	colorscheme onehalfdark
+
+
+	nnoremap <silent> <F9> :exec "color " .
+			\ ((g:colors_name == "onehalfdark") ? "onehalflight" : "onehalfdark")<CR>
+
 
 	set ts=4 sw=4
 	set expandtab

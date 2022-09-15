@@ -21,9 +21,9 @@
 
 	" abre arquivo de edicao
 	if has('win32')
-		nnoremap <c-,> :edit C:\Users\Daniel\AppData\Local\nvim\init.vim<cr>
-		nnoremap <a-.> :edit C:\Users\Daniel\AppData\Local\nvim\init.vim<cr>
-		nnoremap <a-,> :tabedit C:\Users\Daniel\AppData\Local\nvim\init.vim<cr>
+		nnoremap <c-,> :edit $LOCALAPPDATA\nvim\init.vim<cr>
+		nnoremap <a-.> :edit $LOCALAPPDATA\nvim\init.vim<cr>
+		nnoremap <a-,> :tabedit $LOCALAPPDATA\nvim\init.vim<cr>
 	else
 		nnoremap <c-,> :edit ~/.vim/init.vim<cr>
 		nnoremap <a-.> :edit ~/.vim/init.vim<cr>
