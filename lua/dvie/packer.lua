@@ -48,7 +48,6 @@ return packer.startup(function(use)
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
-	use("ThePrimeagen/harpoon")
 
 	-- vs-code like icons
 	use("nvim-tree/nvim-web-devicons")
@@ -107,6 +106,8 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand sidepa
+
+	use("ThePrimeagen/harpoon")
 
 	if packer_bootstrap then
 		require("packer").sync()

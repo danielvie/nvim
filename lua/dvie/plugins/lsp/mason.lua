@@ -25,7 +25,6 @@ mason_lspconfig.setup({
 		"tsserver",
 		"html",
 		"cssls",
-		"lua_ls",
 		"emmet_ls",
 	},
 	-- auto-install configured servers (with lspconfig)

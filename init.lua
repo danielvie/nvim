@@ -1,12 +1,11 @@
 require("dvie.packer")
 require("dvie.core.remaps")
 
-require("dvie.plugins.harpoon")
+require("dvie.plugins.nvim-tree")
 
 require("dvie.core.options")
 require("dvie.core.colorscheme")
 require("dvie.plugins.comment")
-require("dvie.plugins.nvim-tree")
 require("dvie.plugins.lualine")
 require("dvie.plugins.telescope")
 require("dvie.plugins.nvim-cmp")
@@ -17,3 +16,5 @@ require("dvie.plugins.lsp.null-ls")
 require("dvie.plugins.autopairs")
 require("dvie.plugins.treesitter")
 require("dvie.plugins.gitsigns")
+
+require("dvie.plugins.harpoon")
