@@ -108,6 +108,9 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand sidepa
 
 	use("ThePrimeagen/harpoon")
+	use("lervag/vimtex")
+	use("easymotion/vim-easymotion")
+
 
 	if packer_bootstrap then
 		require("packer").sync()

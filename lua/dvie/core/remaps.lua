@@ -40,6 +40,7 @@ keymap.set("n", "x", '"_x')
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+keymap.set("n", "<leader>0", ":NvimTreeFindFile<CR>") -- find file explorer
 
 -- telescope
 keymap.set("n", "<leader>pf", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore

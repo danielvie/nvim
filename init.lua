@@ -18,3 +18,4 @@ require("dvie.plugins.treesitter")
 require("dvie.plugins.gitsigns")
 
 require("dvie.plugins.harpoon")
+require("dvie.plugins.vimtex")

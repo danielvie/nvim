@@ -4,6 +4,8 @@ if not lspconfig_status then
 	return
 end
 
+require'lspconfig'.pyright.setup{}
+
 -- import cmp-nvim-lsp plugin safely
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then

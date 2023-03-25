@@ -221,6 +221,11 @@ _G.packer_plugins = {
     path = "/Users/danielvieira/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
   },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/Users/danielvieira/.local/share/nvim/site/pack/packer/start/vim-easymotion",
+    url = "https://github.com/easymotion/vim-easymotion"
+  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "/Users/danielvieira/.local/share/nvim/site/pack/packer/start/vim-maximizer",
@@ -240,6 +245,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/danielvieira/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/Users/danielvieira/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
