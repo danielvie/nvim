@@ -63,8 +63,6 @@ keymap.set("n", "<leader>w", ":w<cr>")
 keymap.set("n", "<leader>q", ":q<cr>")
 keymap.set("n", "<leader>d", ":bd<cr>")
 keymap.set("n", "<leader>s", ":so<cr>")
-keymap.set("n", "<c-o>", ":bn<cr>")
-keymap.set("n", "<c-i>", ":bp<cr>")
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")

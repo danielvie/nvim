@@ -40,7 +40,6 @@ return packer.startup(function(use)
 	use("szw/vim-maximizer") -- maximizes and restores current window
 
 	-- essential plugins
-	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
 	-- commenting with gc
@@ -111,6 +110,8 @@ return packer.startup(function(use)
 	use("lervag/vimtex")
 	use("easymotion/vim-easymotion")
 
+	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+	use("tpope/vim-repeat")
 
 	if packer_bootstrap then
 		require("packer").sync()
