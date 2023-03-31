@@ -152,6 +152,19 @@ require('lazy').setup({
     { "tpope/vim-surround" },
     { "vim-scripts/ReplaceWithRegister" },
     { "wellle/targets.vim" },
-    
+    {
+        "folke/todo-comments.nvim",
+        dependencies = {"nvim-lua/plenary.nvim"},
+        opts = {},
+        cmd = { "TodoQuickFix" },
+        keys = {
+            { "<leader>T", "<cmd>TodoTelescope<cr>" }
+        },
+        config = function()
+            require("todo-comments").setup {
+            -- your configuration comes here
+            }
+        end
+    },
 
 }, {})
