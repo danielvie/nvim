@@ -2,7 +2,7 @@
 require("me.remap")
 -- Global setup.
 local cmp = require 'cmp'
-local luasnip = require 'luasnip'
+-- local luasnip = require 'luasnip'
 
 require('luasnip/loaders/from_vscode').lazy_load()
 
@@ -36,7 +36,7 @@ cmp.setup({
   })
 })
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -53,7 +53,7 @@ require("mason").setup({
 require("mason-lspconfig").setup()
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-local on_attach = function(client, bufnr)
+local on_attach = function(bufnr, client)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
@@ -63,39 +63,44 @@ local on_attach = function(client, bufnr)
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   -- leaving only what I actually use...
-  nmap { "K", "<cmd>Lspsaga hover_doc<CR>", opts }
-  -- nmap { "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts }
-  nmap { "gd", "<cmd>Telescope lsp_definitions<CR>", opts }
-  nmap { "gr", "<cmd>Telescope lsp_references<CR>", opts }
-  nmap { "<C-j>", "<cmd>Telescope lsp_document_symbols<CR>", opts }
-  nmap { "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts }
+  vim.keymap.set('n', "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+  -- vim.keymap.set('n', "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+  vim.keymap.set('n', "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
+  vim.keymap.set('n', "gr", "<cmd>Telescope lsp_references<CR>", opts)
+  vim.keymap.set('n', "<C-j>", "<cmd>Telescope lsp_document_symbols<CR>", opts)
+  vim.keymap.set('n', "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 
-  nmap { "gi", "<cmd>Telescope lsp_implementations<CR>", opts }
-  nmap { "<leader>D", "<cmd>Telescope lsp_type_definitions<CR>", opts }
-  nmap { "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts }
-  nmap { '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts }
-  nmap { "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts }
-  nmap { "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts }
-  nmap { "<leader>dj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts }
-  nmap { "<leader>dk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts }
-  nmap { "<leader>r", "<cmd>Lspsada rename<CR>", opts }
+  vim.keymap.set('n', "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+  vim.keymap.set('n', "<leader>D", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+  vim.keymap.set('n', "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+  vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  vim.keymap.set('n', "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+  vim.keymap.set('n', "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+  vim.keymap.set('n', "<leader>dj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+  vim.keymap.set('n', "<leader>dk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+  vim.keymap.set('n', "<leader>r", "<cmd>Lspsada rename<CR>", opts)
 
-  vim.cmd([[
-            augroup formatting
-                autocmd! * <buffer>
-                autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
-                autocmd BufWritePre <buffer> lua OrganizeImports(1000)
-            augroup END
-        ]])
+  -- Set autoformat on save
+  -- vim.cmd(
+  --   [[
+  --     augroup formatting
+  --         autocmd! * <buffer>
+  --         autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
+  --         autocmd BufWritePre <buffer> lua OrganizeImports(1000)
+  --     augroup END
+  --   ]]
+  -- )
 
   -- Set autocommands conditional on server_capabilities
-  vim.cmd([[
-            augroup lsp_document_highlight
-                autocmd! * <buffer>
-                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-                autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-            augroup END
-        ]])
+  vim.cmd(
+    [[
+      augroup lsp_document_highlight
+          autocmd! * <buffer>
+          autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+          autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+      augroup END
+    ]]
+  )
 end
 
 -- organize imports
@@ -120,6 +125,14 @@ local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- get the language server to recognize `vim` global
+        globals = { 'vim' },
+      }
+    }
+  }
 }
 
 lspconfig.texlab.setup {

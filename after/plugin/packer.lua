@@ -121,10 +121,28 @@ return require('packer').startup(function(use)
 
   -- harpoon
   use 'theprimeagen/harpoon'
+
+  -- latex
   use 'lervag/vimtex'
+
+  -- surround
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
-  use 'tpope/vim-surround'
+
+  -- replace with `gr`
   use 'vim-scripts/ReplaceWithRegister'
+
+  -- replace next, ex: cin'
   use 'wellle/targets.vim'
+
+  -- autoclose parens, brackets, quotes, etc...
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
+  }
+
+  -- change root folder
+  use { 'airblade/vim-rooter' }
 end)
