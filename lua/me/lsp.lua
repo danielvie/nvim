@@ -2,6 +2,10 @@
 require("me.remap")
 -- Global setup.
 local cmp = require 'cmp'
+local luasnip = require 'luasnip'
+
+require('luasnip/loaders/from_vscode').lazy_load()
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -24,7 +28,6 @@ cmp.setup({
       end
     end
   },
-
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
@@ -47,9 +50,10 @@ require("mason").setup({
   }
 })
 
+require("mason-lspconfig").setup()
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local on_attach = function(client, bufnr)
-
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
@@ -112,20 +116,13 @@ function OrganizeImports(timeoutms)
 end
 
 local lspconfig = require('lspconfig')
-lspconfig.gopls.setup {
+
+lspconfig.lua_ls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
-  settings = {
-    gopls = {
-      gofumpt = true,
-    },
-  },
-  flags = {
-    debounce_text_changes = 150,
-  },
 }
 
-lspconfig.sumneko_lua.setup {
+lspconfig.texlab.setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
@@ -133,19 +130,6 @@ lspconfig.sumneko_lua.setup {
 lspconfig.hls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
-}
-
-lspconfig.golangci_lint_ls.setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-  settings = {
-    gopls = {
-      gofumpt = true,
-    },
-  },
-  flags = {
-    debounce_text_changes = 150,
-  },
 }
 
 lspconfig.rust_analyzer.setup {

@@ -31,7 +31,10 @@ end
 
 local ok, treesitter = pcall(require, "nvim-treesitter.configs")
 if not ok then return end
-treesitter.setup { ensure_installed = "all", highlight = { enable = true } }
+treesitter.setup { 
+	ensure_installed = "all", 
+	highlight = { enable = true, additional_vim_regex_highlighting = {"latex"} } 
+}
 
 -- keymaps
 vim.keymap.set("n", "<leader>p", "<cmd>Glow<cr>")
