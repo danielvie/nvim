@@ -41,7 +41,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 
 "Comment Plugin
-Plug 'preservim/nerdcommenter'
+Plug 'numToStr/Comment.nvim'
 
 "Auto-format plugin
 Plug 'sbdchd/neoformat'

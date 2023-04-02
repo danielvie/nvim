@@ -13,7 +13,7 @@ local options = {
   backup = false,
   writebackup = false,
   swapfile = false,
-  clipboard = "unnamedplus",
+  -- clipboard = "unnamedplus",
   showmode = false,
 }
 

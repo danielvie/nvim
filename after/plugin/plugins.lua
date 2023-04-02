@@ -95,16 +95,33 @@ return require('packer').startup(function(use)
   --todo comments
   use 'folke/todo-comments.nvim'
 
+  --todo comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+
   --devicons
   use 'kyazdani42/nvim-web-devicons'
 
   --fullstack dev
-  use 'pangloss/vim-javascript' --JS support
+  use 'pangloss/vim-javascript'    --JS support
   use 'leafgarland/typescript-vim' --TS support
-  use 'maxmellon/vim-jsx-pretty' --JS and JSX syntax
-  use 'jparise/vim-graphql' --GraphQL syntax
+  use 'maxmellon/vim-jsx-pretty'   --JS and JSX syntax
+  use 'jparise/vim-graphql'        --GraphQL syntax
   use 'mattn/emmet-vim'
 
   -- le duck
   use 'tamton-aquib/duck.nvim'
+
+  -- harpoon
+  use 'theprimeagen/harpoon'
+  use 'lervag/vimtex'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-repeat'
+  use 'tpope/vim-surround'
+  use 'vim-scripts/ReplaceWithRegister'
+  use 'wellle/targets.vim'
 end)
