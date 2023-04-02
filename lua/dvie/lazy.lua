@@ -80,11 +80,19 @@ require('lazy').setup({
         -- end,
     },
 
-    { -- Theme inspired by Atom
-        'bluz71/vim-nightfly-guicolors',
+    -- { -- Theme inspired by Atom
+    --     'bluz71/vim-nightfly-guicolors',
+    --     priority = 1000,
+    --     config = function()
+    --       vim.cmd.colorscheme 'nightfly'
+    --     end,
+    -- },
+
+    {
+        'catppuccin/nvim',
         priority = 1000,
         config = function()
-          vim.cmd.colorscheme 'nightfly'
+          vim.cmd.colorscheme 'catppuccin'
         end,
     },
 
@@ -94,7 +102,7 @@ require('lazy').setup({
         opts = {
             options = {
                 icons_enabled = false,
-                theme = 'nightfly',
+                theme = 'catppuccin',
                 component_separators = '|',
                 section_separators = '',
             },
@@ -148,8 +156,8 @@ require('lazy').setup({
     { "rafamadriz/friendly-snippets" },
 
     { "easymotion/vim-easymotion" },
-    { "tpope/vim-repeat" },
     { "tpope/vim-surround" },
+    { "tpope/vim-repeat" },
     { "vim-scripts/ReplaceWithRegister" },
     { "wellle/targets.vim" },
     {

@@ -2,6 +2,7 @@
 require('dvie.lazy')
 require('dvie.set')
 require('dvie.remap')
+require('dvie.lualine')
 
 require('dvie.plugins.treesitter')
 require('dvie.plugins.lsp')
