@@ -145,4 +145,13 @@ return require('packer').startup(function(use)
 
   -- change root folder
   use { 'airblade/vim-rooter' }
+
+  -- alpha (manage projects)
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('alpha').setup(require('me.alpha_theme').config)
+    end
+  }
 end)

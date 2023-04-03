@@ -9,8 +9,8 @@ treesitter.setup {
 -- keymaps
 -- vim.keymap.set("n", "<leader>p", "<cmd>Glow<cr>")
 
-vim.keymap.set('n', "<leader>pf", "<cmd>Telescope find_files<CR>")
-vim.keymap.set('n', "<leader>pb", "<cmd>Telescope buffers<CR>")
+vim.keymap.set('n', "<leader>sf", "<cmd>Telescope find_files<CR>")
+vim.keymap.set('n', "<leader>sb", "<cmd>Telescope buffers<CR>")
 vim.keymap.set('n', "<leader>sg", "<cmd>Telescope live_grep sorting_strategy=ascending<CR>")
 vim.keymap.set('n', "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>")
 vim.keymap.set('n', "<leader>dl", "<cmd>Telescope diagnostics<cr>")
@@ -46,3 +46,7 @@ vim.keymap.set('o', 'H', "^")
 
 -- rooter, set root folder
 vim.keymap.set('n', '<leader>ro', '<cmd>Rooter<cr>')
+
+-- alpha (init menu)
+vim.keymap.set('n', '<leader><esc>', '<cmd>Alpha<cr>')
+
