@@ -1,2 +1,4 @@
 /plugged
 .DS_Store
+.vscode
+packer_compiled.lua
