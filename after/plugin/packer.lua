@@ -154,4 +154,8 @@ return require('packer').startup(function(use)
       require('alpha').setup(require('me.alpha_theme').config)
     end
   }
+
+  -- color highlight
+  use { 'uga-rosa/ccc.nvim' }
+
 end)
