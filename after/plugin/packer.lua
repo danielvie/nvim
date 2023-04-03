@@ -144,7 +144,7 @@ return require('packer').startup(function(use)
   }
 
   -- change root folder
-  use { 'airblade/vim-rooter' }
+  use { 'notjedi/nvim-rooter.lua' }
 
   -- alpha (manage projects)
   use {
