@@ -9,9 +9,9 @@ treesitter.setup {
 -- keymaps
 -- vim.keymap.set("n", "<leader>p", "<cmd>Glow<cr>")
 
-vim.keymap.set('n', "<leader>sf", "<cmd>Telescope find_files<CR>")
-vim.keymap.set('n', "<leader>sb", "<cmd>Telescope buffers<CR>")
-vim.keymap.set('n', "<leader>sg", "<cmd>Telescope live_grep sorting_strategy=ascending<CR>")
+vim.keymap.set('n', "<leader>ff", "<cmd>Telescope find_files<CR>")
+vim.keymap.set('n', "<leader>fb", "<cmd>Telescope buffers<CR>")
+vim.keymap.set('n', "<leader>fw", "<cmd>Telescope live_grep sorting_strategy=ascending<CR>")
 vim.keymap.set('n', "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>")
 vim.keymap.set('n', "<leader>dl", "<cmd>Telescope diagnostics<cr>")
 
@@ -27,7 +27,7 @@ vim.keymap.set('n', "<leader>'", "<cmd>lua require('duck').cook()<cr>")
 -- personal facilities
 vim.keymap.set('n', '<leader>w', ":w<cr>")
 vim.keymap.set('n', '<leader>q', ":q<cr>")
-vim.keymap.set('n', '<leader>c', ":bd<cr>")
+vim.keymap.set('n', '<leader>x', ":bd<cr>")
 vim.keymap.set('n', '<leader><leader>s', ":so<cr>")
 vim.keymap.set('n', '<leader><leader>,', ":edit ~/.config/nvim/init.lua<cr>")
 
