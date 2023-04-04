@@ -1,4 +1,9 @@
-/plugged
-.DS_Store
+plugin
+custom
+spell
+ftplugin
+coc-settings.json
+.luarc.json
+lazy-lock.json
+
 .vscode
-packer_compiled.lua
