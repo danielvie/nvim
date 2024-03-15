@@ -1,0 +1,5 @@
+/plugged
+.DS_Store
+.vscode
+packer_compiled.lua
+/lazy-lock.json

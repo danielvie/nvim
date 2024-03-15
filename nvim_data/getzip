@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp ~/.local/share/nvimdata.zip ~/.config/nvim/nvim_data
+split nvimdata.zip --bytes=5m nvimdata_
