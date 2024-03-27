@@ -26,5 +26,7 @@ vim.keymap.set("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find sorting_s
 vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>")
 vim.keymap.set("n", "<leader>fp", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>")
 
+vim.keymap.set("n", "<leader>ft", "<cmd>Telescope resume <cr><esc>")
+
 vim.keymap.set("n", "L", "<cmd>bnext<cr>")
 vim.keymap.set("n", "H", "<cmd>bprevious<cr>")

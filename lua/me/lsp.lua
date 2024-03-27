@@ -69,7 +69,7 @@ local on_attach = function(bufnr, client)
   -- vim.keymap.set('n', "K", "<cmd>Lspsaga hover_doc<CR>", opts)
   vim.keymap.set('n', "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
   vim.keymap.set('n', "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
-  vim.keymap.set('n', "gr", "<cmd>Telescope lsp_references<CR>", opts)
+  -- vim.keymap.set('n', "gr", "<cmd>Telescope lsp_references<CR>", opts)
 
   vim.keymap.set('n', "<leader>fl", "<cmd>Telescope lsp_workspace_symbols<CR>", opts)
   vim.keymap.set('n', "<leader>fr", "<cmd>Telescope lsp_document_symbols<CR>", opts)
@@ -129,10 +129,15 @@ end
 
 local lspconfig = require('lspconfig')
 
--- lspconfig.visible.setup {
---   capabilities = capabilities,
---   on_attach = on_attach,
--- }
+-- local lsps = {"tsserver", "texlab", "cmake", "marksman", "lua_ls"}
+local lsps = {"tsserver", "texlab", "cmake", "lua_ls"}
+
+for _, value in pairs(lsps) do
+    lspconfig[value].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+end
 
 lspconfig.lua_ls.setup {
   capabilities = capabilities,
@@ -153,11 +158,6 @@ lspconfig.clangd.setup {
   cmd = {"clangd", "--compile-commands-dir=./build"}
 }
 
-lspconfig.tsserver.setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-}
-
 lspconfig.pylsp.setup {
     capabilities = capabilities,
     on_attach = on_attach,
@@ -166,19 +166,6 @@ lspconfig.pylsp.setup {
         formatCommand = {"black"},
         pylsp = {
             plugins = {
-                -- jedi_completion = {fuzzy = true},
-                -- jedi_completion = {eager=true},
-                -- jedi_completion = {
-                --     include_params = true,
-                -- },
-                -- jedi_signature_help = {enabled = true},
-                -- jedi = {
-                --     extra_paths = {'~/projects/work_odoo/odoo14', '~/projects/work_odoo/odoo14'},
-                --     -- environment = {"odoo"},
-                -- },
-                -- pyflakes={enabled=true},
-                -- -- pylint = {args = {'--ignore=E501,E231', '-'}, enabled=true, debounce=200},
-                -- pylsp_mypy={enabled=false},
                 pycodestyle={
                     enabled=true,
                     ignore={'E231', 'E302', 'E305'},
@@ -188,67 +175,6 @@ lspconfig.pylsp.setup {
             }
         }
 }
-
-
--- require'lspconfig'[server].setup {
---     on_attach=on_attach,
---     filetypes = {'python'},
---     settings = {
---         configurationSources = {"flake8"},
---         formatCommand = {"black"},
---         pylsp = {
---             plugins = {
---                 -- jedi_completion = {fuzzy = true},
---                 -- jedi_completion = {eager=true},
---                 jedi_completion = {
---                     include_params = true,
---                 },
---                 jedi_signature_help = {enabled = true},
---                 jedi = {
---                     extra_paths = {'~/projects/work_odoo/odoo14', '~/projects/work_odoo/odoo14'},
---                     -- environment = {"odoo"},
---                 },
---                 pyflakes={enabled=true},
---                 -- pylint = {args = {'--ignore=E501,E231', '-'}, enabled=true, debounce=200},
---                 pylsp_mypy={enabled=false},
---                 pycodestyle={
---                     enabled=true,
---                     ignore={'E501', 'E231'},
---                     maxLineLength=120},
---                     yapf={enabled=true}
---                 }
---             }
---         }
---     }
-
-
-
-
-lspconfig.texlab.setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-}
-
-lspconfig.cmake.setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-}
-
--- lspconfig.gopls.setup {
---   capabilities = capabilities,
---   on_attach = on_attach,
--- }
-
-
--- lspconfig.matlab_language_server.setup {
---   capabilities = capabilities,
---   on_attach = on_attach,
--- }
-
-
-
-
-
 
 lspconfig.rust_analyzer.setup {
   capabilities = capabilities,

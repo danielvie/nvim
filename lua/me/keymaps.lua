@@ -37,6 +37,7 @@ vim.keymap.set("n", "<leader><leader>x", ":w<cr>:so<cr>")
 -- macros
 vim.keymap.set("n", '<s-q>', "@q")
 vim.keymap.set("n", '<s-w>', "@w")
+vim.keymap.set("n", '<s-e>', "@e")
 vim.keymap.set("n", "<s-t>", ":.!sh<cr>")
 
 
@@ -59,7 +60,8 @@ vim.keymap.set("n", "<leader>sv", "<C-w>v")
 
 vim.keymap.set("n", '<leader><leader>,', ":edit ~/.config/nvim/init.lua<cr>")
 vim.keymap.set("n", '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set("n", '<leader>pv', ":Ex<cr>")
+-- vim.keymap.set("n", '<leader>pv', ":Ex<cr>")
+vim.keymap.set("n", '<leader>pv', "<cmd>Neotree<cr>")
 
 local iswindows = vim.loop.os_uname().sysname
 
@@ -68,6 +70,7 @@ if iswindows then
     vim.keymap.set("n", '<leader>kp', ":e $localappdata/nvim/lua/me/plugins.lua<cr>")
     vim.keymap.set("n", '<leader>kl', ":e $localappdata/nvim/lua/me/lsp.lua<cr>")
     vim.keymap.set("n", '<leader>ki', ":e $localappdata/nvim/init.lua<cr>")
+    vim.keymap.set("n", '<leader>no', ":e C:/Users/dvieira/desktop/notes.md<cr>")
 else
     vim.keymap.set("n", '<leader>ks', ":e ~/.config/nvim/lua/me/keymaps.lua<cr>")
     vim.keymap.set("n", '<leader>kp', ":e ~/.config/nvim/lua/me/plugins.lua<cr>")
