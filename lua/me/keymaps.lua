@@ -61,11 +61,18 @@ vim.keymap.set("n", '<leader><leader>,', ":edit ~/.config/nvim/init.lua<cr>")
 vim.keymap.set("n", '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set("n", '<leader>pv', ":Ex<cr>")
 
+local iswindows = vim.loop.os_uname().sysname
 
-vim.keymap.set("n", '<leader>ks', ":e ~/.config/nvim/lua/me/keymaps.lua<cr>")
-vim.keymap.set("n", '<leader>kp', ":e ~/.config/nvim/lua/me/plugins.lua<cr>")
-vim.keymap.set("n", '<leader>kh', ":h bufferline<cr>")
-vim.keymap.set("n", '<leader>kl', ":e ~/.config/nvim/lua/me/lsp.lua<cr>")
+if iswindows then
+    vim.keymap.set("n", '<leader>ks', ":e $localappdata/nvim/lua/me/keymaps.lua<cr>")
+    vim.keymap.set("n", '<leader>kp', ":e $localappdata/nvim/lua/me/plugins.lua<cr>")
+    vim.keymap.set("n", '<leader>kl', ":e $localappdata/nvim/lua/me/lsp.lua<cr>")
+    vim.keymap.set("n", '<leader>ki', ":e $localappdata/nvim/init.lua<cr>")
+else
+    vim.keymap.set("n", '<leader>ks', ":e ~/.config/nvim/lua/me/keymaps.lua<cr>")
+    vim.keymap.set("n", '<leader>kp', ":e ~/.config/nvim/lua/me/plugins.lua<cr>")
+    vim.keymap.set("n", '<leader>kl', ":e ~/.config/nvim/lua/me/lsp.lua<cr>")
+end
 
 
 -- goto to end/begin of line

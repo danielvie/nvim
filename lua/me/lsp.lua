@@ -51,7 +51,9 @@ require("mason").setup({
   }
 })
 
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = {"lua_ls", "rust_analyzer", "cmake", "clangd", "pylsp"}
+}
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local on_attach = function(bufnr, client)

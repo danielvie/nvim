@@ -33,7 +33,6 @@ require('me.harpoon')
 require('me.fugitive')
 require('me.colorhighlight')
 
-
 require('me.gitsigns')
 require('me.feline')
 require('me.bufferline')
