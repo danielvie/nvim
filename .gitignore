@@ -1,5 +1,7 @@
-/plugged
-.DS_Store
-.vscode
-packer_compiled.lua
-/lazy-lock.json
+tags
+test.sh
+.luarc.json
+nvim
+
+spell/
+lazy-lock.json
