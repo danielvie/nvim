@@ -142,8 +142,11 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.list = false
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.listchars = { trail = '·', nbsp = '␣' }
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', eol = '↵' }
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', eol = '↩' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -302,6 +305,12 @@ require('lazy').setup({
   --
   -- Use the `dependencies` key to specify the dependencies of a particular plugin
 
+  { -- facility functions plenary
+    'nvim-lua/plenary.nvim',
+    config = function()
+      vim.keymap.set('n', '<a-t>', '<cmd>PlenaryBustedFile %<cr>')
+    end,
+  },
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
@@ -560,6 +569,7 @@ require('lazy').setup({
         -- gopls = {},
         pyright = {},
         matlab_ls = {},
+        zls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --

@@ -1,17 +1,19 @@
 -- facilities
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>', { desc = 'Save' })
-vim.keymap.set('n', '<a-q>', '<cmd>q!<cr>', { desc = 'Quit' })
+vim.keymap.set('n', '<a-q>', '<cmd>wa<cr><cmd>q<cr>', { desc = 'Quit Force' })
 vim.keymap.set('n', '<a-w>', '<cmd>q<cr>', { desc = 'Quit' })
-vim.keymap.set('n', '<a-x>', '<cmd>bd<cr>', { desc = 'Quit' })
+vim.keymap.set('n', '<a-x>', '<cmd>bd<cr>', { desc = 'Delete Buffer' })
 vim.keymap.set('n', '<leader>pv', '<cmd>Ex<cr>', { desc = 'Open FileExplorer' })
 vim.keymap.set('n', '<leader>0', '<cmd>cd %:p:h<cr>', { desc = 'Set Root Folder' })
 vim.keymap.set('n', '<leader>v', '<cmd>!make<cr>', { desc = 'Run !make' })
 vim.keymap.set('n', '<s-h>', '<cmd>bp<cr>', { desc = 'Prev Buffer' })
 vim.keymap.set('n', '<s-l>', '<cmd>bn<cr>', { desc = 'Next Buffer' })
 
+vim.keymap.set('n', '<leader><leader>x', '<cmd>w<cr>:source %<cr>')
+
 vim.keymap.set('n', '<leader>no', '<cmd>e $userprofile/desktop/notes.md<cr>', { desc = 'Open Notes' })
 vim.keymap.set('n', '<s-r>', 'za', { desc = 'Toggle Fold' })
-vim.keymap.set('n', '<leader>t', 'ggVG', { desc = 'Select All' })
+vim.keymap.set('n', '<leader><leader>t', 'ggVG', { desc = 'Select All' })
 
 -- quickfix list
 vim.keymap.set('n', '<a-y>', '<cmd>cfirst<cr>', { desc = 'first quickfix item' })
