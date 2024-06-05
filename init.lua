@@ -387,18 +387,23 @@ require('lazy').setup({
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
-      vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-      vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-      vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
-      vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
+
+      local telescope_map = function(lhs, rhs, desc)
+        vim.keymap.set('n', lhs, rhs, { desc = 'Telescope: ' .. desc })
+      end
+
+      telescope_map('<leader>sh', builtin.help_tags, '[S]earch [H]elp')
+      telescope_map('<leader>sk', builtin.keymaps, '[S]earch [K]eymaps')
+      telescope_map('<leader>sf', builtin.find_files, '[S]earch [F]iles')
+      telescope_map('<leader>ss', builtin.builtin, '[S]earch [S]elect Telescope')
+      telescope_map('<leader>sw', builtin.grep_string, '[S]earch current [W]ord')
       -- vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-      vim.keymap.set('n', '<leader>sg', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
-      vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-      vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
-      vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-      vim.keymap.set('n', '<leader>st', builtin.treesitter, { desc = '[S]earch [T]reesitter Symbols' })
-      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      telescope_map('<leader>sg', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", '[S]earch by [G]rep (Args)')
+      telescope_map('<leader>sd', builtin.diagnostics, '[S]earch [D]iagnostics')
+      telescope_map('<leader>sr', builtin.resume, '[S]earch [R]esume')
+      telescope_map('<leader>s.', builtin.oldfiles, '[S]earch Recent Files ("." for repeat)')
+      telescope_map('<leader>st', builtin.treesitter, '[S]earch [T]reesitter Symbols')
+      telescope_map('<leader><leader>', builtin.buffers, '[ ] Find existing buffers')
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
@@ -576,7 +581,7 @@ require('lazy').setup({
         },
         -- gopls = {},
         pyright = {},
-        matlab_ls = {},
+        -- matlab_ls = {},
         zls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -585,7 +590,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
+        tsserver = {},
         --
 
         lua_ls = {
@@ -816,9 +821,9 @@ require('lazy').setup({
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup {
-        mappings = {
-          add = 'sy',
-        },
+        -- mappings = {
+        --   add = 'sy',
+        -- },
       }
 
       require('mini.pairs').setup {}
