@@ -2,7 +2,7 @@
 vim.opt.wrap = false
 
 -- tab
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 
 -- numbers
 vim.opt.rnu = true
