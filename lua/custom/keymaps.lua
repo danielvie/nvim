@@ -25,7 +25,7 @@ vim.keymap.set('n', '<a-,>', '<cmd>cnext<cr>', { desc = 'next quickfix item' })
 
 vim.keymap.set('n', '<leader>ks', '<cmd>e $localappdata/nvim/lua/custom/keymaps.lua<cr>', { desc = 'goto `Keymaps.lua`' })
 
-vim.keymap.set('n', '<leader>ali', '<cmd>e C:/SANDBOX/ALIAS<cr>', { desc = 'goto `ALIAS`' })
+vim.keymap.set('n', '<leader>ali', '<cmd>e D:/ALIAS<cr>', { desc = 'goto `ALIAS`' })
 vim.keymap.set('n', '<leader>to', '<cmd>e $userprofile/Documents/notes/todo.md<cr>', { desc = 'goto `ALIAS`' })
 
 -- macros
