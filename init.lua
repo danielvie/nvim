@@ -881,7 +881,7 @@ require('lazy').setup({
       -- - sr)'  - [S]urround [R]eplace [)] [']
       -- require('mini.surround').setup()
       require('mini.pairs').setup {}
-      -- require('mini.tabline').setup {}
+      require('mini.tabline').setup {}
       -- require('mini.diff').setup {}
       -- require('mini.starter').setup {}
       -- require('mini.indentscope').gen_animation.none()
