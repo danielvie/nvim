@@ -1,13 +1,4 @@
-### Based on
-[https://github.com/nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+# 💤 LazyVim
 
-### Tips and notes
-
-`.clangd` config
-```
-CompileFlags:
-  Add: [ 
-    '-std=c++23',
-    '-I/Users/danielvieira/Sandbox/cpp/cpp_expected/src',
-  ]
-```
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
