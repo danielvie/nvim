@@ -2,15 +2,4 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {
-  { 'tpope/vim-fugitive' },
-  {
-    'kevinhwang91/nvim-bqf',
-  },
-  {
-    'junegunn/fzf',
-  },
-  {
-    dir = '~/plugins/stackmap.nvim/',
-  },
-}
+return {}
