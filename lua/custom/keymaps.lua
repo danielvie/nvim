@@ -13,22 +13,17 @@ vim.keymap.set("n", "<leader><leader>x", "<cmd>w<cr>:source %<cr>")
 
 vim.keymap.set("n", "<leader>no", "<cmd>e C:/SANDBOX/Notes<cr>", { desc = "Open Notes" })
 vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
-vim.keymap.set("n", "<leader>t", "ggVG", { desc = "Select All" })
+vim.keymap.set("n", "<leader>a", "ggVG", { desc = "select [A]ll" })
 
 -- quickfix list
-vim.keymap.set("n", "<a-y>", "<cmd>cfirst<cr>", { desc = "first quickfix item" })
-vim.keymap.set("n", "<a-o>", "<cmd>clast<cr>", { desc = "last quickfix item" })
-vim.keymap.set("n", "<a-u>", "<cmd>cprev<cr>", { desc = "prev quickfix item" })
-vim.keymap.set("n", "<a-i>", "<cmd>cnext<cr>", { desc = "next quickfix item" })
-vim.keymap.set("n", "<a-m>", "<cmd>cprev<cr>", { desc = "prev quickfix item" })
-vim.keymap.set("n", "<a-,>", "<cmd>cnext<cr>", { desc = "next quickfix item" })
+-- vim.keymap.set("n", "<a-y>", "<cmd>cfirst<cr>", { desc = "first quickfix item" })
+-- vim.keymap.set("n", "<a-o>", "<cmd>clast<cr>", { desc = "last quickfix item" })
+-- vim.keymap.set("n", "<a-u>", "<cmd>cprev<cr>", { desc = "prev quickfix item" })
+-- vim.keymap.set("n", "<a-i>", "<cmd>cnext<cr>", { desc = "next quickfix item" })
+-- vim.keymap.set("n", "<a-m>", "<cmd>cprev<cr>", { desc = "prev quickfix item" })
+-- vim.keymap.set("n", "<a-,>", "<cmd>cnext<cr>", { desc = "next quickfix item" })
 
-vim.keymap.set(
-  "n",
-  "<leader>ks",
-  "<cmd>e $localappdata/nvim/lua/custom/keymaps.lua<cr>",
-  { desc = "goto `Keymaps.lua`" }
-)
+vim.keymap.set('n', '<leader>ks', '<cmd>e $localappdata/nvim/lua/custom/keymaps.lua<cr>', { desc = 'goto `Keymaps.lua`' })
 
 vim.keymap.set("n", "<leader>ali", "<cmd>e C:/SANDBOX/ALIAS<cr>", { desc = "goto `ALIAS`" })
 vim.keymap.set("n", "<leader>to", "<cmd>e C:/SANDBOX/Notes/todo.md<cr>", { desc = "goto `ALIAS`" })

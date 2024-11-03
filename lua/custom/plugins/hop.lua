@@ -18,6 +18,11 @@ return {
       -- end, { remap = true })
       --
       vim.keymap.set("n", "S", ":HopWord<cr>", { desc = "HopWord" })
+
+      vim.keymap.set("v", "s", function()
+        hop.hint_words {}
+      end, { remap = true })
+
       vim.keymap.set("n", "<leader>gl", ":HopLine<cr>", { desc = "HopLine" })
 
       vim.keymap.set("", "f", function()

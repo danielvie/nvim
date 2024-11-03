@@ -13,6 +13,11 @@ vim.opt.rnu = true
 vim.opt_global.spell = true
 vim.opt_global.spelllang = "en_us"
 
+-- matching brackets
+vim.cmd [[
+  highlight MatchParen guibg=#4c4c4c guifg=NONE
+]]
+
 -- add cfilter
 vim.cmd("packadd cfilter")
 
@@ -30,4 +35,4 @@ function GitLogToRegister()
   vim.fn.setreg("+", result)
 end
 
-vim.cmd([[command! GitWho lua GitLogToRegister()]])
+vim.cmd [[command! GitWho lua GitLogToRegister()]]
