@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader><leader>x", "<cmd>w<cr>:source %<cr>")
 
 vim.keymap.set("n", "<leader>no", "<cmd>e C:/SANDBOX/Notes<cr>", { desc = "Open Notes" })
 vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
-vim.keymap.set("n", "<leader>a", "ggVG", { desc = "select [A]ll" })
+vim.keymap.set("n", "<c-a>", "ggVG", { desc = "select [A]ll" })
 
 -- quickfix list
 -- vim.keymap.set("n", "<a-y>", "<cmd>cfirst<cr>", { desc = "first quickfix item" })
