@@ -5,15 +5,15 @@ vim.keymap.set("n", "<a-w>", "<cmd>q<cr>", { desc = "Quit" })
 vim.keymap.set("n", "<a-x>", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>pv", "<cmd>Ex<cr>", { desc = "Open FileExplorer" })
 vim.keymap.set("n", "<leader>0", "<cmd>cd %:p:h<cr>", { desc = "Set Root Folder" })
-vim.keymap.set("n", "<leader>v", "<cmd>!make<cr>", { desc = "Run !make" })
+vim.keymap.set("n", "<leader>v", "<cmd>!task<cr>", { desc = "_run !make" })
 vim.keymap.set("n", "<s-h>", "<cmd>bp<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<s-l>", "<cmd>bn<cr>", { desc = "Next Buffer" })
 
 vim.keymap.set("n", "<leader><leader>x", "<cmd>w<cr>:source %<cr>")
 
-vim.keymap.set("n", "<leader>no", "<cmd>e C:/SANDBOX/Notes<cr>", { desc = "Open Notes" })
+vim.keymap.set("n", "<leader>no", "<cmd>Neorg index<cr>", { desc = "Open Notes" })
 vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
-vim.keymap.set("n", "<c-a>", "ggVG", { desc = "select [A]ll" })
+vim.keymap.set("n", "<leader><leader>t", "ggVG", { desc = "select [A]ll" })
 
 -- quickfix list
 -- vim.keymap.set("n", "<a-y>", "<cmd>cfirst<cr>", { desc = "first quickfix item" })
@@ -31,7 +31,7 @@ vim.keymap.set("n", "<leader>to", "<cmd>e C:/SANDBOX/Notes/todo.md<cr>", { desc 
 -- macros
 vim.keymap.set("n", "<s-q>", "@q", { desc = "run macro @q" })
 vim.keymap.set("n", "<s-w>", "@w", { desc = "run macro @w" })
-vim.keymap.set("n", "<s-e>", "@w", { desc = "run macro @e" })
+vim.keymap.set("n", "<s-e>", "@e", { desc = "run  @e" })
 
 -- commands
 local uname = vim.loop.os_uname()

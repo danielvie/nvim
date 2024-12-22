@@ -10,10 +10,11 @@ return {
         ['core.itero'] = {},
         ['core.keybinds'] = {},
         ['core.concealer'] = {},
+        ['core.export'] = {},
         ['core.dirman'] = {
           config = {
             workspaces = {
-              index = 'C:/Users/daniel/Documents/notes/',
+              index = 'C:/SANDBOX/Notes/',
             },
             default_workspace = 'index',
           },
