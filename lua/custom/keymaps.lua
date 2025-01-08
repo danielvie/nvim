@@ -26,7 +26,6 @@ vim.keymap.set("n", "<leader><leader>t", "ggVG", { desc = "select [A]ll" })
 vim.keymap.set('n', '<leader>ks', '<cmd>e $localappdata/nvim/lua/custom/keymaps.lua<cr>', { desc = 'goto `Keymaps.lua`' })
 
 vim.keymap.set("n", "<leader>ali", "<cmd>e C:/SANDBOX/ALIAS<cr>", { desc = "goto `ALIAS`" })
-vim.keymap.set("n", "<leader>to", "<cmd>e C:/SANDBOX/Notes/todo.md<cr>", { desc = "goto `ALIAS`" })
 
 -- macros
 vim.keymap.set("n", "<s-q>", "@q", { desc = "run macro @q" })

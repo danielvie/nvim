@@ -1,20 +1,31 @@
 return {
   {
     'nvim-neorg/neorg',
-    lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-    version = '*', -- Pin Neorg to the latest stable release
-    config = true,
+    lazy = false,
+    version = '*',
+    build = ":Neorg sync-parsers",
     opts = {
       load = {
         ['core.defaults'] = {},
         ['core.itero'] = {},
-        ['core.keybinds'] = {},
+        ['core.keybinds'] = {
+          config = {
+            default_keybinds = true,
+            neorg_leader = "<Leader>n",
+          }
+        },
         ['core.concealer'] = {},
+        ['core.completion'] = {
+          config = {
+            engine = "nvim-cmp"
+          }
+        },
         ['core.export'] = {},
         ['core.dirman'] = {
           config = {
             workspaces = {
-              index = 'C:/SANDBOX/Notes/',
+              -- index = "C:/SANDBOX/Notes/",
+              index = "~/Documents/doutorado.git/docs/notes",
             },
             default_workspace = 'index',
           },
