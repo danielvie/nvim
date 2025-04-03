@@ -19,6 +19,12 @@
 					"cmake"
 				],
 				"path": "./cmake.json"
+			},
+			{
+				"language": [
+					"all"
+				],
+				"path": "./taskfile.json"
 			}
 		]
 	}

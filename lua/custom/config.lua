@@ -1,5 +1,5 @@
 -- no wrap
-vim.opt.wrap = false
+-- vim.opt.wrap = true
 
 -- tab
 vim.opt.tabstop = 4

@@ -5,7 +5,7 @@ vim.keymap.set("n", "<a-w>", "<cmd>q<cr>", { desc = "Quit" })
 vim.keymap.set("n", "<a-x>", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>pv", "<cmd>Ex<cr>", { desc = "Open FileExplorer" })
 vim.keymap.set("n", "<leader>0", "<cmd>cd %:p:h<cr>", { desc = "Set Root Folder" })
-vim.keymap.set("n", "<leader>v", "<cmd>!task<cr>", { desc = "_run !make" })
+vim.keymap.set("n", "<leader>v", "<cmd>!task<cr>", { desc = "Run !make" })
 vim.keymap.set("n", "<s-h>", "<cmd>bp<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<s-l>", "<cmd>bn<cr>", { desc = "Next Buffer" })
 
@@ -33,15 +33,17 @@ vim.keymap.set("n", "<s-w>", "@w", { desc = "run macro @w" })
 vim.keymap.set("n", "<s-e>", "@e", { desc = "run  @e" })
 
 -- commands
-local uname = vim.loop.os_uname()
-local iswindows = uname.sysname == "Windows_NT"
-local teminal_command = "sh"
-if iswindows then
-  teminal_command = "cmd"
-end
+-- local uname = vim.loop.os_uname()
+-- local iswindows = uname.sysname == "Windows_NT"
+-- local terminal_command = "sh"
+-- if iswindows then
+--   terminal_command = "cmd"
+-- end
+--
+local terminal_command = "cmd"
 
-vim.keymap.set("n", "<s-t>", "<cmd>.!" .. teminal_command .. "<cr>", { desc = "run line as cmd" })
-vim.keymap.set("v", "<s-t>", ":'<,'>!" .. teminal_command .. "<cr>", { desc = "run line as cmd" })
+vim.keymap.set("n", "<s-t>", "<cmd>.!" .. terminal_command .. "<cr>", { desc = "run line as cmd" })
+vim.keymap.set("v", "<s-t>", ":'<,'>!" .. terminal_command .. "<cr>", { desc = "run line as cmd" })
 
 -- operators
 vim.keymap.set("o", "<s-l>", "$", { desc = "operators to end of line" })

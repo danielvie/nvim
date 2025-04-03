@@ -8,12 +8,8 @@ return {
       load = {
         ['core.defaults'] = {},
         ['core.itero'] = {},
-        ['core.keybinds'] = {
-          config = {
-            default_keybinds = true,
-            neorg_leader = "<Leader>n",
-          }
-        },
+        ['core.ui.calendar'] = {},
+        ['core.keybinds'] = {},
         ['core.concealer'] = {},
         ['core.completion'] = {
           config = {
@@ -24,10 +20,11 @@ return {
         ['core.dirman'] = {
           config = {
             workspaces = {
-              -- index = "C:/SANDBOX/Notes/",
-              index = "~/Documents/doutorado.git/docs/notes",
+              -- index = "~/Documents/doutorado.git/docs/notes",
+              index = 'C:/Users/daniel/Documents/notes/',
+              doc = 'C:/Users/daniel/Documents/DOUTORADO/docs/notes',
             },
-            default_workspace = 'index',
+            default_workspace = 'doc',
           },
         },
       },

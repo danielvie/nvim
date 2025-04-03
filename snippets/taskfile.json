@@ -1,0 +1,18 @@
+{
+	"snip1": {
+		"prefix": "!task",
+		"body": [
+			"version: '3'",
+			"",
+			"tasks:",
+			"",
+			"  default:",
+			"    deps: [main]",
+			"",
+			"  main:",
+			"    aliases: [\"m\"]",
+			"    cmds:",
+			"     - $1"
+		]
+	}
+}
