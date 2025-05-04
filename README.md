@@ -10,6 +10,19 @@ A starting point for Neovim that is:
 
 **NOT** a Neovim distribution, but instead a starting point for your configuration.
 
+
+## useful
+
+point nvim to another directory:
+```bash
+export NVIM_APPNAME=nvim_new_dir
+```
+
+```powershell
+$env:NVIM_APPNAME = "nvim_new_dir"
+```
+
+
 ## Installation
 
 ### Install Neovim
