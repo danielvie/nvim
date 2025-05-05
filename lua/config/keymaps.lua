@@ -48,3 +48,6 @@ vim.keymap.set("n", "<a-l>", "<cmd>vertical resize +2<cr>", { desc = "Resize Win
 
 -- goto
 vim.keymap.set("n", "<leader>no", "<cmd>Neorg index<cr>", { desc = "GoTo Neorg Index" })
+
+-- terminal
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
