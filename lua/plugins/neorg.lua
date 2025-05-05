@@ -21,10 +21,11 @@ return {
           config = {
             workspaces = {
               -- index = "~/Documents/doutorado.git/docs/notes",
-              index = 'C:/Users/daniel/Documents/notes/',
+              -- index = 'C:/Users/daniel/Documents/notes/',
+              index = 'C:/SANDBOX/NOTES/',
               doc = 'C:/Users/daniel/Documents/DOUTORADO/docs/notes',
             },
-            default_workspace = 'doc',
+            default_workspace = 'index',
           },
         },
       },

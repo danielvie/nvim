@@ -45,3 +45,6 @@ vim.keymap.set("n", "<a-k>", "<cmd>resize -2<cr>", { desc = "Resize Window -" })
 vim.keymap.set("n", "<a-j>", "<cmd>resize +2<cr>", { desc = "Resize Window +" })
 vim.keymap.set("n", "<a-h>", "<cmd>vertical resize -2<cr>", { desc = "Resize Window Vertical -" })
 vim.keymap.set("n", "<a-l>", "<cmd>vertical resize +2<cr>", { desc = "Resize Window Vertical +" })
+
+-- goto
+vim.keymap.set("n", "<leader>no", "<cmd>Neorg index<cr>", { desc = "GoTo Neorg Index" })
