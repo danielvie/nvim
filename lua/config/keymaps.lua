@@ -14,6 +14,9 @@ vim.keymap.set("n", "<leader><leader>t", "ggVG", { desc = "select [A]ll" })
 vim.keymap.set("n", "<leader><leader>x", "<cmd>:source %<cr>", {desc = "Source file"})
 vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
 
+-- diagnostics
+vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end, {desc = "Open Diagnostics in Float"})
+
 -- macros
 vim.keymap.set("n", "<s-q>", "@q", { desc = "run macro @q" })
 vim.keymap.set("n", "<s-w>", "@w", { desc = "run macro @w" })

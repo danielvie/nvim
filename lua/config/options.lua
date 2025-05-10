@@ -63,13 +63,3 @@ vim.opt.splitbelow = true
 -- sets how neovim will display whitespace characters
 vim.opt.list = true
 vim.opt.listchars = {tab = " ", trail = ".", nbsp = "󱁐"}
-
--- highlight text after yanking
-vim.api.nvim_set_hl(0, "YankHighlight", {fg = "#ffffff", bg = "#9362ff"})
-vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank( {higroup = "YankHighlight", timeout = 200})
-  end,
-})
