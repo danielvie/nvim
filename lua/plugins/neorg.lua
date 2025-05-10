@@ -25,7 +25,7 @@ return {
               index = 'C:/SANDBOX/NOTES/',
               doc = 'C:/Users/daniel/Documents/DOUTORADO/docs/notes',
             },
-            default_workspace = 'index',
+            default_workspace = 'doc',
           },
         },
       },
