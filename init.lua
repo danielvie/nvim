@@ -3,7 +3,7 @@ require("config.keymaps")
 require("config.options")
 
 -- colorscheme
-vim.cmd("colorscheme kanagawa");
+vim.cmd("colorscheme kanagawa")
 -- vim.cmd("colorscheme onedark");
 
 -- highligh when yank
@@ -13,4 +13,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 300 })
   end,
 })
-
