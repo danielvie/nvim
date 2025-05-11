@@ -30,6 +30,7 @@ vim.opt.relativenumber = true
 -- spell
 vim.opt_global.spell = true
 vim.opt_global.spelllang = "en_us"
+-- vim.opt_global.spelllang = "pt"
 
 -- show line under cursor
 vim.opt.cursorline = true
