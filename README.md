@@ -24,3 +24,19 @@ $env:NVIM_APPNAME = "nvim_new_dir"
 ```powershell
 git clone https://github.com/danielvie/nvim
 ```
+
+## Brazilian Spelling
+
+copy the `%LOCALAPPDATA%/nvim/spell/pt.utf-8.spl`
+to `{nvim install path}/share/nvim/runtime/spell/`
+
+```vim
+set spell
+set spelllang=en
+```
+
+```vim
+set spell
+set spelllang=pt
+```
+
