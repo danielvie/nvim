@@ -66,7 +66,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = " ", trail = ".", nbsp = "󱁐" }
 
 -- highligh when yank
-vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#754ecc", fg = "#ffffff" })
+vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#ca4b56", fg = "#ffffff" })
 vim.api.nvim_create_autocmd("TextYankPost", {
     callback = function()
         vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 300 })
