@@ -23,9 +23,9 @@ vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<cr>", { desc = "Clear search highl
 vim.keymap.set("n", "<s-h>", "<cmd>bp<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<s-l>", "<cmd>bn<cr>", { desc = "Next Buffer" })
 
-vim.keymap.set("n", "<leader><leader>t", "ggVG", { desc = "select [A]ll" })
+vim.keymap.set("n", "<a-t>", "ggVG", { desc = "select [A]ll" })
+-- vim.keymap.set("n", "<leader><leader>x", "<cmd>:source %<cr>", { desc = "Source file" })
 
-vim.keymap.set("n", "<leader><leader>x", "<cmd>:source %<cr>", { desc = "Source file" })
 vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
 
 -- macros
