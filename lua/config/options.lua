@@ -17,7 +17,7 @@ vim.opt.smartcase = true
 
 -- use clipboard register
 vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
+    vim.opt.clipboard = "unnamedplus"
 end)
 
 -- keep signcolumn on by default
@@ -41,9 +41,9 @@ vim.opt.undofile = true
 vim.opt.mouse = "a"
 
 -- matching brackets
-vim.cmd [[
+vim.cmd([[
   highlight MatchParen guibg=#4c4c4c guifg=NONE
-]]
+]])
 
 -- add cfilter
 vim.cmd("packadd cfilter")
@@ -52,7 +52,7 @@ vim.cmd("packadd cfilter")
 vim.g.have_nerd_font = true
 
 -- fold
-vim.opt.foldcolumn = '1'
+vim.opt.foldcolumn = "1"
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 
@@ -62,4 +62,12 @@ vim.opt.splitbelow = true
 
 -- sets how neovim will display whitespace characters
 vim.opt.list = true
-vim.opt.listchars = {tab = " ", trail = ".", nbsp = "󱁐"}
+vim.opt.listchars = { tab = " ", trail = ".", nbsp = "󱁐" }
+
+-- highligh when yank
+vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#9362ff", fg = "#ffffff" })
+vim.api.nvim_create_autocmd("TextYankPost", {
+    callback = function()
+        vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 300 })
+    end,
+})
