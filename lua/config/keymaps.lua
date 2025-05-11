@@ -3,14 +3,14 @@ vim.keymap.set("n", "-", "<cmd>Oil --float<cr>", { desc = "Open file explorer in
 
 -- diagnostics
 vim.keymap.set("n", "gl", function()
-  vim.diagnostic.open_float()
+    vim.diagnostic.open_float()
 end, { desc = "Open Diagnostics in Float" })
 
 -- conform (formatter)
 vim.keymap.set("n", "<leader>cf", function()
-  require("conform").format({
-    lsp_format = "fallback",
-  })
+    require("conform").format({
+        lsp_format = "fallback",
+    })
 end, { desc = "Format current file" })
 
 -- facilities

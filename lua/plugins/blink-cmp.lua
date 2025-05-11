@@ -1,24 +1,24 @@
 return {
     {
-        'saghen/blink.compat',
+        "saghen/blink.compat",
         -- use the latest release, via version = '*', if you also use the latest release for blink.cmp
-        version = '1.*',
+        version = "1.*",
         -- lazy.nvim will automatically load the plugin when it's required by blink.cmp
         lazy = true,
         -- make sure to set opts so that lazy.nvim calls blink.compat's setup
         opts = {},
     },
     {
-        'saghen/blink.cmp',
+        "saghen/blink.cmp",
         -- optional: provides snippets for the snippet source
         dependencies = {
-            'rafamadriz/friendly-snippets',
-            'moyiz/blink-emoji.nvim',
-            'ray-x/cmp-sql',
+            "rafamadriz/friendly-snippets",
+            "moyiz/blink-emoji.nvim",
+            "ray-x/cmp-sql",
         },
 
         -- use a release tag to download pre-built binaries
-        version = '1.*',
+        version = "1.*",
         -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
         -- build = 'cargo build --release',
         -- If you use nix, you can build from source using latest nightly rust with:
@@ -40,13 +40,13 @@ return {
             --
             -- See :h blink-cmp-config-keymap for defining your own keymap
             keymap = {
-                preset = 'default',
+                preset = "default",
             },
 
             appearance = {
                 -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
                 -- Adjusts spacing to ensure icons are aligned
-                nerd_font_variant = 'mono',
+                nerd_font_variant = "mono",
             },
 
             -- (Default) Only show the documentation popup when manually triggered
@@ -56,26 +56,26 @@ return {
             -- Default list of enabled providers defined so that you can extend it
             -- elsewhere in your config, without redefining it, due to `opts_extend`
             sources = {
-                default = { 'lsp', 'path', 'snippets', 'buffer', 'emoji', 'sql' },
+                default = { "lsp", "path", "snippets", "buffer", "emoji", "sql" },
                 providers = {
                     emoji = {
-                        module = 'blink-emoji',
-                        name = 'Emoji',
+                        module = "blink-emoji",
+                        name = "Emoji",
                         score_offset = 15, -- Tune by preference
                         opts = { insert = true }, -- Insert emoji (default) or complete its name
                         should_show_items = function()
                             return vim.tbl_contains(
                                 -- Enable emoji completion only for git commits and markdown.
                                 -- By default, enabled for all file-types.
-                                { 'gitcommit', 'markdown' },
+                                { "gitcommit", "markdown" },
                                 vim.o.filetype
                             )
                         end,
                     },
                     sql = {
                         -- IMPORTANT: use the same name as you would for nvim-cmp
-                        name = 'sql',
-                        module = 'blink.compat.source',
+                        name = "sql",
+                        module = "blink.compat.source",
 
                         -- all blink.cmp source config options work as normal:
                         score_offset = -3,
@@ -89,7 +89,7 @@ return {
                             return vim.tbl_contains(
                                 -- Enable emoji completion only for git commits and markdown.
                                 -- By default, enabled for all file-types.
-                                { 'sql' },
+                                { "sql" },
                                 vim.o.filetype
                             )
                         end,
@@ -102,8 +102,8 @@ return {
             -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
             --
             -- See the fuzzy documentation for more information
-            fuzzy = { implementation = 'prefer_rust_with_warning' },
+            fuzzy = { implementation = "prefer_rust_with_warning" },
         },
-        opts_extend = { 'sources.default' },
+        opts_extend = { "sources.default" },
     },
 }
