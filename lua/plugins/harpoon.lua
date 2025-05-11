@@ -1,49 +1,49 @@
 return {
     {
-        'theprimeagen/harpoon',
-        branch = 'harpoon2',
+        "theprimeagen/harpoon",
+        branch = "harpoon2",
         dependencies = {
-            'nvim-lua/plenary.nvim',
+            "nvim-lua/plenary.nvim",
         },
         config = function()
-            local harpoon = require 'harpoon'
-            harpoon:setup()
+            local harpoon = require("harpoon")
+            harpoon:setup({})
 
             local map = function(keys, func, desc)
-                vim.keymap.set('n', keys, func, { desc = 'Harpoon: ' .. desc })
+                vim.keymap.set("n", keys, func, { desc = "Harpoon: " .. desc })
             end
 
-            map('<leader>a', function()
+            map("<leader>a", function()
                 harpoon:list():add()
-            end, '[A]dd')
-            map('<leader>e', function()
+            end, "[A]dd")
+            map("<leader>e", function()
                 harpoon.ui:toggle_quick_menu(harpoon:list())
-            end, 'List Markers')
+            end, "List Markers")
 
-            map('<leader>1', function()
+            map("<leader>1", function()
                 harpoon:list():select(1)
-            end, '1')
-            map('<leader>2', function()
+            end, "1")
+            map("<leader>2", function()
                 harpoon:list():select(2)
-            end, '2')
-            map('<leader>3', function()
+            end, "2")
+            map("<leader>3", function()
                 harpoon:list():select(3)
-            end, '3')
-            map('<leader>4', function()
+            end, "3")
+            map("<leader>4", function()
                 harpoon:list():select(4)
-            end, '4')
-            map('<a-u>', function()
+            end, "4")
+            map("<a-u>", function()
                 harpoon:list():select(1)
-            end, '1')
-            map('<a-i>', function()
+            end, "1")
+            map("<a-i>", function()
                 harpoon:list():select(2)
-            end, '2')
-            map('<a-o>', function()
+            end, "2")
+            map("<a-o>", function()
                 harpoon:list():select(3)
-            end, '3')
-            map('<a-p>', function()
+            end, "3")
+            map("<a-p>", function()
                 harpoon:list():select(4)
-            end, '4')
+            end, "4")
 
             -- basic telescope configuration
             -- local conf = require('telescope.config').values
