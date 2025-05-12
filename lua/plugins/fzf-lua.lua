@@ -7,91 +7,91 @@ return {
     opts = {},
     keys = {
         {
-            "<leader>sf",
+            "<localleader>ff",
             function()
                 require("fzf-lua").files()
             end,
-            desc = "[S]earch [F]iles in project directory",
+            desc = "[F]ind [F]iles in project directory",
         },
         {
-            "<leader>sg",
+            "<localleader>fg",
             function()
                 require("fzf-lua").live_grep()
             end,
-            desc = "[S]earch files by [G]rep project directory",
+            desc = "[F]ind files by [G]rep project directory",
         },
         {
-            "<leader>sn",
+            "<localleader>fc",
             function()
                 require("fzf-lua").files({ cwd = vim.fn.stdpath("config") })
             end,
-            desc = "[S]earch [N]eovim files",
+            desc = "[F]ind [C]onfig files",
         },
         {
-            "<leader>sh",
+            "<localleader>sh",
             function()
                 require("fzf-lua").helptags()
             end,
             desc = "[S]earch [H]elp",
         },
         {
-            "<leader>sk",
+            "<localleader>sk",
             function()
                 require("fzf-lua").keymaps()
             end,
             desc = "[S]earch [K]eymaps",
         },
         {
-            "<leader>su",
+            "<localleader>su",
             function()
                 require("fzf-lua").spell_suggest()
             end,
             desc = "[S]earch Spell S[u]ggest",
         },
         {
-            "<leader>sr",
+            "<localleader>sr",
             function()
                 require("fzf-lua").resume()
             end,
             desc = "[S]earch [R]esume",
         },
         {
-            "<leader>sb",
+            "<localleader>sb",
             function()
                 require("fzf-lua").builtin()
             end,
             desc = "[S]earch [B]uiltin",
         },
         {
-            "<leader>sw",
+            "<localleader>sw",
             function()
                 require("fzf-lua").grep_cword()
             end,
             desc = "[S]earch current [W]ord",
         },
         {
-            "<leader>sd",
+            "<localleader>sd",
             function()
                 require("fzf-lua").diagnostics_document()
             end,
             desc = "[S]earch [D]iagnostics",
         },
         {
-            "<leader>so",
+            "<localleader>so",
             function()
                 require("fzf-lua").oldfiles()
             end,
             desc = "[S]earch [O]ld Files",
         },
         {
-            "<leader><leader>",
+            "<localleader><localleader>",
             function()
                 require("fzf-lua").buffers()
             end,
             desc = "[ ] Find existing buffers",
         },
         {
-            "<leader>/",
+            "<localleader>/",
             function()
                 require("fzf-lua").lgrep_curbuf()
             end,
