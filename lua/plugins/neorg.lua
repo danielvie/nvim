@@ -11,11 +11,11 @@ return {
                 ["core.ui.calendar"] = {},
                 ["core.keybinds"] = {},
                 ["core.concealer"] = {},
-                ["core.completion"] = {
-                    config = {
-                        engine = "nvim-cmp",
-                    },
-                },
+                -- ["core.completion"] = {
+                --     config = {
+                --         engine = "blink",
+                --     },
+                -- },
                 ["core.export"] = {},
                 ["core.dirman"] = {
                     config = {
@@ -29,5 +29,6 @@ return {
                 },
             },
         },
+        config = true,
     },
 }
