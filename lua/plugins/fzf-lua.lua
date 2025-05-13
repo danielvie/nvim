@@ -7,18 +7,18 @@ return {
     opts = {},
     keys = {
         {
-            "<localleader>ff",
+            "<localleader>sf",
             function()
                 require("fzf-lua").files()
             end,
-            desc = "[F]ind [F]iles in project directory",
+            desc = "[S]earch [F]iles in project directory",
         },
         {
-            "<localleader>fg",
+            "<localleader>sg",
             function()
                 require("fzf-lua").live_grep()
             end,
-            desc = "[F]ind files by [G]rep project directory",
+            desc = "[S]earch files by [G]rep project directory",
         },
         {
             "<localleader>fc",

@@ -75,3 +75,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- adjust visual highlight color
 vim.api.nvim_set_hl(0, "Visual", { bg = "#115577", fg = "white" })
+
+-- -- set shell
+-- vim.opt.shell = "cmd"
