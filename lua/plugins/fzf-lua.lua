@@ -182,6 +182,8 @@ return {
         { "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "FZF: Find Files (git-files)" },
         { "<leader>fo", "<cmd>FzfLua oldfiles<cr>", desc = "FZF: FZF: [F]ind [O]ld files" },
         { "<leader>fR", LazyVim.pick("oldfiles", { cwd = vim.uv.cwd() }), desc = "FZF: Recent (cwd)" },
+        -- spell
+        { "<localleader>su", "<cmd>FzfLua spell_suggest<CR>", desc = "FZF: Spell Suggest" },
         -- git
         { "<leader>gc", "<cmd>FzfLua git_commits<CR>", desc = "FZF: Commits" },
         { "<leader>gs", "<cmd>FzfLua git_status<CR>", desc = "FZF: Status" },

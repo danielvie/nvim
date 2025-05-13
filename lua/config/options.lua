@@ -19,5 +19,13 @@ vim.opt.relativenumber = true
 -- signcolumn
 vim.opt.signcolumn = "yes"
 
+-- spell
+vim.opt_global.spell = true
+vim.opt_global.spelllang = "en_us"
+-- vim.opt_global.spelllang = "pt"
+
+-- change visual highlight color
+vim.api.nvim_set_hl(0, "Visual", { bg = "#115577", fg = "white" })
+
 --
 vim.g.lazyvim_picker = "fzf"
