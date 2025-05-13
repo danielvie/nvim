@@ -30,6 +30,12 @@ vim.keymap.set("v", "<s-k>", ":m '<-2<CR>gv=gv", { desc = "Move Line Up" })
 -- oil
 vim.keymap.set("n", "-", "<cmd>Oil --float<cr>", { desc = "Open file explorer in Oil" })
 
+-- neotree
+vim.keymap.del("n", "<leader>fe")
+vim.keymap.set("n", "<localleader>fe", function()
+    Snacks.explorer({ cwd = LazyVim.root() })
+end, { desc = "Explorer" })
+
 -- neorg
 vim.keymap.set("n", "<leader>no", "<cmd>Neorg index<cr>", { desc = "Open Neorg" })
 
