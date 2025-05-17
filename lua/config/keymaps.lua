@@ -7,7 +7,29 @@ vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save" })
 vim.keymap.set("n", "<a-x>", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>0", "<cmd>cd %:p:h<cr>", { desc = "Set Root Folder" })
 vim.keymap.set("n", "<a-t>", "ggVG", { desc = "select [A]ll" })
-vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
+
+if not vim.g.vscode then
+    vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
+else
+    local vscode = require("vscode")
+    vim.keymap.set("n", "zm", function()
+        vscode.action("editor.foldAllExcept")
+    end)
+
+    vim.keymap.set("n", "zr", function()
+        vscode.action("editor.unfoldAll")
+    end)
+
+    vim.keymap.set("n", "<s-r>", function()
+        vscode.action("editor.toggleFoldRecursively")
+    end)
+
+    vim.keymap.set("n", "<leader>ks", function()
+        vscode.action("workbench.action.openGlobalKeybindings")
+    end)
+
+    -- workbench.action.openGlobalKeybindings
+end
 
 -- macros
 vim.keymap.set("n", "<s-q>", "@q", { desc = "run macro @q" })
