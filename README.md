@@ -43,3 +43,47 @@ set spell
 set spelllang=pt
 ```
 
+## VSCode
+
+Handful keybindings.json 
+```json
+  // navigation
+  {
+    "key": "ctrl+y",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "alt+x",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusLeftGroup",
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusRightGroup",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusAboveGroup",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusBelowGroup",
+  },
+```
+```
+```
+
+```json
+{
+    "vscode-neovim.neovimExecutablePaths.win32": "C:/SANDBOX/APP/nvim-win64/bin/nvim.exe",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+}
+```
+```
+```
