@@ -6,7 +6,7 @@
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save" })
 vim.keymap.set("n", "<a-x>", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>0", "<cmd>cd %:p:h<cr>", { desc = "Set Root Folder" })
-vim.keymap.set("n", "<a-t>", "ggVG", { desc = "select [A]ll" })
+vim.keymap.set("n", "<c-a>", "ggVG", { desc = "select [A]ll" })
 
 if not vim.g.vscode then
     vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
@@ -28,7 +28,9 @@ else
         vscode.action("workbench.action.openGlobalKeybindings")
     end)
 
-    -- workbench.action.openGlobalKeybindings
+    vim.keymap.set("n", "<leader>v", function()
+        vscode.action("runInTerminal.run", { args = { name = "r" } })
+    end)
 end
 
 -- macros
