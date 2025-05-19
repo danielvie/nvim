@@ -73,17 +73,20 @@ Handful keybindings.json
     "key": "ctrl+j",
     "command": "workbench.action.focusBelowGroup",
   },
-```
-```
+  {
+    "key": "alt+t",
+    "command": "vscode-neovim.send",
+    "args": "<a-t>",
+    "when": "editorTextFocus && neovim.init"
+  }
 ```
 
+settings.json
 ```json
 {
     "vscode-neovim.neovimExecutablePaths.win32": "C:/SANDBOX/APP/nvim-win64/bin/nvim.exe",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
-}
-```
-```
+},
 ```
