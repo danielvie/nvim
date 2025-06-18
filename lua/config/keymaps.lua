@@ -31,6 +31,31 @@ else
     vim.keymap.set("n", "<leader>v", function()
         vscode.action("runInTerminal.run", { args = { name = "r" } })
     end)
+
+    -- harpoon
+    vim.keymap.set("n", "<leader>a", function()
+        vscode.action("vscode-harpoon.addEditor")
+    end)
+
+    vim.keymap.set("n", "<leader>e", function()
+        vscode.action("vscode-harpoon.editEditors")
+    end)
+
+    vim.keymap.set("n", "<localleader>tu", function()
+        vscode.action("todo.toggleBox")
+    end)
+    vim.keymap.set("n", "<localleader>td", function()
+        vscode.action("todo.toggleDone")
+    end)
+    vim.keymap.set("n", "<localleader>tc", function()
+        vscode.action("todo.toggleCancelled")
+    end)
+    vim.keymap.set("n", "<localleader>ts", function()
+        vscode.action("todo.toggleStart")
+    end)
+    vim.keymap.set("n", "<localleader>ta", function()
+        vscode.action("todo.archive")
+    end)
 end
 
 -- macros
