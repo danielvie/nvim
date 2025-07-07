@@ -18,6 +18,11 @@ point nvim to another directory:
 export NVIM_APPNAME=nvim_new_dir
 ```
 
+read file in hex
+```bash
+:%!xxd
+```
+
 ```powershell
 $env:NVIM_APPNAME = "nvim_new_dir"
 ```
