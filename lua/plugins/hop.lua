@@ -19,10 +19,11 @@ return {
             vim.keymap.set("n", "<leader>gl", ":HopLine<cr>", { desc = "HopLine" })
 
             vim.cmd([[
-                highlight HopNextKey guifg=#ff0000 gui=bold
-                highlight HopNextKey1 guifg=#61ff8b gui=bold
-                highlight HopNextKey2 guifg=#bc61ff gui=bold
+                highlight HopNextKey guifg=#FB513F gui=bold
+                highlight HopNextKey1 guifg=#10FBD6 gui=bold
+                highlight HopNextKey2 guifg=#7AFB11 gui=bold
             ]])
+
         end,
     },
 }
