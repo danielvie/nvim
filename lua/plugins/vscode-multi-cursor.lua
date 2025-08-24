@@ -18,7 +18,7 @@ return {
         k({ "n" }, "mcs", cursors.flash_char, { desc = "Create cursor using flash" })
         k({ "n" }, "mcw", cursors.flash_word, { desc = "Create selection using flash" })
 
-        vim.keymap.set({ "n", "x" }, "mm", function()
+        vim.keymap.set({ "n", "x" }, ",mm", function()
             require("vscode-multi-cursor").selectHighlights()
         end)
         -- vim.keymap.set({ "n", "x", "i" }, "ii", "idasdfasdfasdf<esc>")

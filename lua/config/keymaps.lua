@@ -8,6 +8,13 @@ vim.keymap.set("n", "<a-x>", "<cmd>bd<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>0", "<cmd>cd %:p:h<cr>", { desc = "Set Root Folder" })
 vim.keymap.set("n", "<a-t>", "ggVG", { desc = "select [A]ll", noremap = true, silent = true })
 
+vim.keymap.set(
+    "x",
+    "p",
+    '"_dP',
+    { noremap = true, silent = true, desc = "Paste over selection without changing clipboard" }
+)
+
 if not vim.g.vscode then
     vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
 else
@@ -30,6 +37,15 @@ else
 
     vim.keymap.set("n", "<leader>v", function()
         vscode.action("runInTerminal.run", { args = { name = "r" } })
+    end)
+
+    -- goto errors
+    vim.keymap.set("n", "]d", function()
+        vscode.action("editor.action.marker.next")
+    end)
+
+    vim.keymap.set("n", "[d", function()
+        vscode.action("editor.action.marker.prev")
     end)
 
     -- harpoon
