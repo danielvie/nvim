@@ -39,7 +39,12 @@ else
         vscode.action("runInTerminal.run", { args = { name = "r" } })
     end)
 
-    -- goto errors
+    -- navigation
+    -- vim.keymap.set("n", "h", "gh")
+    -- vim.keymap.set("n", "j", "gj")
+    -- vim.keymap.set("n", "k", "gk")
+    -- vim.keymap.set("n", "l", "gl")
+
     vim.keymap.set("n", "]d", function()
         vscode.action("editor.action.marker.next")
     end)
@@ -57,21 +62,31 @@ else
         vscode.action("vscode-harpoon.editEditors")
     end)
 
-    vim.keymap.set("n", "<localleader>tu", function()
-        vscode.action("todo.toggleBox")
-    end)
     vim.keymap.set("n", "<localleader>td", function()
         vscode.action("todo.toggleDone")
     end)
+
     vim.keymap.set("n", "<localleader>tc", function()
         vscode.action("todo.toggleCancelled")
     end)
+
     vim.keymap.set("n", "<localleader>ts", function()
         vscode.action("todo.toggleStart")
     end)
-    vim.keymap.set("n", "<localleader>ta", function()
-        vscode.action("todo.archive")
+
+    vim.keymap.set("n", "<localleader>tu", function()
+        vscode.action("todo.toggleBox")
     end)
+
+    -- fix 'undo' and 'redo' to use vscode undo stack
+    -- vim.keymap.set("n", "u", "<cmd>call VSCodeNotify('undo')<cr>")
+    -- vim.keymap.set("n", "<c-r>", "<cmd>call VSCodeNotify('redo')<cr>")
+
+    -- vim.keymap.set("n", "u", "iadfasdfasd<esc>")
+
+    -- " Keep undo/redo lists in sync with VSCode
+    -- nmap <silent> u <Cmd>call VSCodeNotify('undo')<CR>
+    -- nmap <silent> <C-r> <Cmd>call VSCodeNotify('redo')<CR>
 end
 
 -- macros

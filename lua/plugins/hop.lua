@@ -23,7 +23,6 @@ return {
                 highlight HopNextKey1 guifg=#10FBD6 gui=bold
                 highlight HopNextKey2 guifg=#7AFB11 gui=bold
             ]])
-
         end,
     },
 }

@@ -3,7 +3,7 @@ return {
         "nvim-neorg/neorg",
         lazy = false,
         version = "*",
-        build = ":Neorg sync-parsers",
+        -- build = ":Neorg sync-parsers",
         opts = {
             load = {
                 ["core.defaults"] = {},
@@ -22,9 +22,10 @@ return {
                         workspaces = {
                             -- index = "~/Documents/doutorado.git/docs/notes",
                             index = "C:/Users/daniel/Documents/notes/",
+                            work = "C:/SANDBOX/NOTES/",
                             doc = "C:/Users/daniel/Documents/DOUTORADO/docs/notes",
                         },
-                        default_workspace = "doc",
+                        default_workspace = "work",
                     },
                 },
             },
