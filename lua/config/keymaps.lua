@@ -78,6 +78,14 @@ else
         vscode.action("todo.toggleBox")
     end)
 
+    vim.keymap.set("n", "<s-h>", function()
+        vscode.action("workbench.action.previousEditor")
+    end)
+
+    vim.keymap.set("n", "<s-l>", function()
+        vscode.action("workbench.action.nextEditor")
+    end)
+    
     -- fix 'undo' and 'redo' to use vscode undo stack
     -- vim.keymap.set("n", "u", "<cmd>call VSCodeNotify('undo')<cr>")
     -- vim.keymap.set("n", "<c-r>", "<cmd>call VSCodeNotify('redo')<cr>")
