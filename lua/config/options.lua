@@ -28,4 +28,4 @@ vim.opt_global.spelllang = "en_us"
 vim.api.nvim_set_hl(0, "Visual", { bg = "#115577", fg = "white" })
 
 --
-vim.g.lazyvim_picker = "fzf"
+-- vim.g.lazyvim_picker = "fzf"
