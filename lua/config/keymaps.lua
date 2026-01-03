@@ -9,10 +9,10 @@ vim.keymap.set("n", "<leader>0", "<cmd>cd %:p:h<cr>", { desc = "Set Root Folder"
 vim.keymap.set("n", "<a-t>", "ggVG", { desc = "select [A]ll", noremap = true, silent = true })
 
 vim.keymap.set(
-    "x",
-    "p",
-    '"_dP',
-    { noremap = true, silent = true, desc = "Paste over selection without changing clipboard" }
+  "x",
+  "p",
+  '"_dP',
+  { noremap = true, silent = true, desc = "Paste over selection without changing clipboard" }
 )
 
 -- macros
@@ -38,82 +38,91 @@ vim.keymap.set("n", "-", "<cmd>Oil --float<cr>", { desc = "Open file explorer in
 
 -- diagnostics
 vim.keymap.set("n", "gl", function()
-    vim.diagnostic.open_float()
+  vim.diagnostic.open_float()
 end, { desc = "Open Diagnostics" })
+
+-- lsp
+vim.keymap.set("x", "an", function()
+  vim.lsp.buf.selection_range("outer")
+end, { desc = "vim.lsp.buf.selection_range('outer')" })
+
+vim.keymap.set("x", "in", function()
+  vim.lsp.buf.selection_range("inner")
+end, { desc = "vim.lsp.buf.selection_range('inner')" })
 
 -- vscode keymaps
 if not vim.g.vscode then
-    vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
+  vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
 else
-    local vscode = require("vscode")
-    vim.keymap.set("n", "zm", function()
-        vscode.action("editor.foldAllExcept")
-    end)
+  local vscode = require("vscode")
+  vim.keymap.set("n", "zm", function()
+    vscode.action("editor.foldAllExcept")
+  end)
 
-    vim.keymap.set("n", "zr", function()
-        vscode.action("editor.unfoldAll")
-    end)
+  vim.keymap.set("n", "zr", function()
+    vscode.action("editor.unfoldAll")
+  end)
 
-    vim.keymap.set("n", "<s-r>", function()
-        vscode.action("editor.toggleFoldRecursively")
-    end)
+  vim.keymap.set("n", "<s-r>", function()
+    vscode.action("editor.toggleFoldRecursively")
+  end)
 
-    vim.keymap.set("n", "<leader>ks", function()
-        vscode.action("workbench.action.openGlobalKeybindings")
-    end)
+  vim.keymap.set("n", "<leader>ks", function()
+    vscode.action("workbench.action.openGlobalKeybindings")
+  end)
 
-    vim.keymap.set("n", "<leader>v", function()
-        vscode.action("runInTerminal.run", { args = { name = "r" } })
-    end)
+  vim.keymap.set("n", "<leader>v", function()
+    vscode.action("runInTerminal.run", { args = { name = "r" } })
+  end)
 
-    -- navigation
-    -- vim.keymap.set("n", "h", "gh")
-    -- vim.keymap.set("n", "j", "gj")
-    -- vim.keymap.set("n", "k", "gk")
-    -- vim.keymap.set("n", "l", "gl")
+  -- navigation
+  -- vim.keymap.set("n", "h", "gh")
+  -- vim.keymap.set("n", "j", "gj")
+  -- vim.keymap.set("n", "k", "gk")
+  -- vim.keymap.set("n", "l", "gl")
 
-    vim.keymap.set("n", "]d", function()
-        vscode.action("editor.action.marker.next")
-    end)
+  vim.keymap.set("n", "]d", function()
+    vscode.action("editor.action.marker.next")
+  end)
 
-    vim.keymap.set("n", "[d", function()
-        vscode.action("editor.action.marker.prev")
-    end)
+  vim.keymap.set("n", "[d", function()
+    vscode.action("editor.action.marker.prev")
+  end)
 
-    -- harpoon
-    vim.keymap.set("n", "<leader>a", function()
-        vscode.action("vscode-harpoon.addEditor")
-    end)
+  -- harpoon
+  vim.keymap.set("n", "<leader>a", function()
+    vscode.action("vscode-harpoon.addEditor")
+  end)
 
-    vim.keymap.set("n", "<leader>e", function()
-        vscode.action("vscode-harpoon.editEditors")
-    end)
+  vim.keymap.set("n", "<leader>e", function()
+    vscode.action("vscode-harpoon.editEditors")
+  end)
 
-    vim.keymap.set("n", "<localleader>td", function()
-        vscode.action("todo.toggleDone")
-    end)
+  vim.keymap.set("n", "<localleader>td", function()
+    vscode.action("todo.toggleDone")
+  end)
 
-    vim.keymap.set("n", "<localleader>tc", function()
-        vscode.action("todo.toggleCancelled")
-    end)
+  vim.keymap.set("n", "<localleader>tc", function()
+    vscode.action("todo.toggleCancelled")
+  end)
 
-    vim.keymap.set("n", "<localleader>ts", function()
-        vscode.action("todo.toggleStart")
-    end)
+  vim.keymap.set("n", "<localleader>ts", function()
+    vscode.action("todo.toggleStart")
+  end)
 
-    vim.keymap.set("n", "<localleader>tu", function()
-        vscode.action("todo.toggleBox")
-    end)
+  vim.keymap.set("n", "<localleader>tu", function()
+    vscode.action("todo.toggleBox")
+  end)
 
-    vim.keymap.set("n", "<s-h>", function()
-        vscode.action("workbench.action.previousEditor")
-    end)
+  vim.keymap.set("n", "<s-h>", function()
+    vscode.action("workbench.action.previousEditor")
+  end)
 
-    vim.keymap.set("n", "<s-l>", function()
-        vscode.action("workbench.action.nextEditor")
-    end)
+  vim.keymap.set("n", "<s-l>", function()
+    vscode.action("workbench.action.nextEditor")
+  end)
 
-    vim.keymap.set("n", "<s-t>", function()
-        vscode.action("workbench.action.terminal.toggleTerminal")
-    end)
+  vim.keymap.set("n", "<s-t>", function()
+    vscode.action("workbench.action.terminal.toggleTerminal")
+  end)
 end
