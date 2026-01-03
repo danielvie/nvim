@@ -33,6 +33,13 @@ $env:NVIM_APPNAME = "nvim_new_dir"
 git clone https://github.com/danielvie/nvim
 ```
 
+## add remote
+
+```powershell
+git remove add origin git@github.com:danielvie/nvim.git
+git fetch
+```
+
 ## Brazilian Spelling
 
 copy the `%LOCALAPPDATA%/nvim/spell/pt.utf-8.spl`
