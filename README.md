@@ -13,6 +13,9 @@ Mr Jakob
 
 ## useful
 
+nvim releases:
+https://github.com/neovim/neovim/releases/
+
 point nvim to another directory:
 ```bash
 export NVIM_APPNAME=nvim_new_dir
