@@ -2,6 +2,7 @@ return {
   {
     "MeanderingProgrammer/treesitter-modules.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
+    vscode = true,
     opts = {
       incremental_selection = {
         enable = true,
