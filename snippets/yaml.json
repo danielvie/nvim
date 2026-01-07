@@ -1,0 +1,20 @@
+{
+  "Taskfile Template": {
+    "prefix": "taskinit",
+    "body": [
+      "version: '3'",
+      "",
+      "tasks:",
+      "",
+      "  default:",
+      "    deps: [main]",
+      "",
+      "  main:",
+      "    aliases: [m]",
+      "    cmds:",
+      "      - ${1}",
+      ""
+    ],
+    "description": "Initialize a Taskfile.yml"
+  }
+}
