@@ -55,6 +55,7 @@ if not vim.g.vscode then
   vim.keymap.set("n", "<s-r>", "za", { desc = "Toggle Fold" })
 else
   local vscode = require("vscode")
+
   vim.keymap.set("n", "zm", function()
     vscode.action("editor.foldAllExcept")
   end)
@@ -125,4 +126,16 @@ else
   vim.keymap.set("n", "<s-t>", function()
     vscode.action("workbench.action.terminal.toggleTerminal")
   end)
+
+  -- latex
+
+  -- add bold on selection
+  vim.keymap.set("v", "<leader>lb", "c\\textbf{}<esc>P")
+
+  -- add \verb|&| on selection
+  vim.keymap.set("v", "<leader>lv", "c\\verb||<esc>P")
+
+  -- cut the line on 100 chars
+  vim.keymap.set("n", "<leader>lq", "_100lbi<CR><ESC>")
+  -- vim.keymap.set("n", "<s-t>", "_100lbi<CR><ESC>")
 end

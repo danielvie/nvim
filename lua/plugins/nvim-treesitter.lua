@@ -27,6 +27,7 @@ return {
     ensure_installed = {
       "bash",
       "c",
+      "cpp",
       "diff",
       "html",
       "javascript",
@@ -34,6 +35,7 @@ return {
       "json",
       "jsonc",
       "lua",
+      "latex",
       "luadoc",
       "luap",
       "markdown",

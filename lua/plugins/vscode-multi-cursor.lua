@@ -32,6 +32,10 @@ return {
       cursors.addSelectionToNextFindMatch()
     end)
 
+    vim.keymap.set({ "n", "x", "i" }, "gl", function()
+      cursors.addSelectionToNextFindMatch()
+    end)
+
     -- vim.keymap.set({ "n", "x", "i" }, "ii", "idasdfasdfasdf<esc>")
   end,
 }
