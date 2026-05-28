@@ -7,10 +7,10 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<leader><Enter>",
-          node_incremental = "<Enter>",
+          init_selection = "<A-,>",
+          node_incremental = "<A-,>",
           scope_incremental = false,
-          node_decremental = "<bs>",
+          node_decremental = "<A-m>",
         },
       },
     },

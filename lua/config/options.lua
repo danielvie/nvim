@@ -3,8 +3,8 @@
 -- Add any additional options here
 
 -- set mapleader
-vim.g.mapleader = " "
-vim.g.maplocalleader = ","
+vim.g.mapleader = ","
+vim.g.maplocalleader = " "
 
 -- tab and spaces
 vim.opt.expandtab = true -- convert tabs to spaces

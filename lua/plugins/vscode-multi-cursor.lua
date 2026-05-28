@@ -22,9 +22,9 @@ return {
     k({ "n" }, "[mc", cursors.prev_cursor, { desc = "Goto prev cursor" })
     k({ "n" }, "]mc", cursors.next_cursor, { desc = "Goto next cursor" })
 
-    vim.keymap.set({ "n", "x", "i" }, ",mm", function()
-      require("vscode-multi-cursor").selectHighlights()
-    end)
+    -- vim.keymap.set({ "n", "x", "i" }, ",mm", function()
+    --   require("vscode-multi-cursor").selectHighlights()
+    -- end)
 
     -- vim.keymap.set("n", ",d", "mciw*<Cmd>nohl<CR>", { remap = true })
 
