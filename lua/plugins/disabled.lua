@@ -1,4 +1,4 @@
 return {
   -- disabling plugins
-  { "folke/flash.nvim", enabled = false },
+  -- { "folke/flash.nvim", enabled = false },
 }
