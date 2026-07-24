@@ -7,8 +7,8 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<A-m>",
-          node_incremental = "<A-m>",
+          init_selection = "<A-,>",
+          node_incremental = "<A-,>",
           scope_incremental = false,
           node_decremental = "<A-.>",
         },
